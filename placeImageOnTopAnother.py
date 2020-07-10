@@ -17,12 +17,12 @@ def placeImageOnTopAnother(folderLocation,bottomImage,imagePlacedOnTop,OutputIma
 
 
 
-folderLocation="C:\\Users\\IgorDC\\Desktop\\"
-bottomImage="LibreOfficeMac.jpg"
-imagePlacedOnTop="ContractOutput.png"
-OutputImageName="JoinedImage.png"
+# folderLocation="C:\\Users\\IgorDC\\Desktop\\"
+# bottomImage="LibreOfficeMac.jpg"
+# imagePlacedOnTop="ContractOutput.png"
+# OutputImageName="JoinedImage.png"
 
 
 
 
-placeImageOnTopAnother(folderLocation,bottomImage,imagePlacedOnTop,OutputImageName)
+# placeImageOnTopAnother(folderLocation,bottomImage,imagePlacedOnTop,OutputImageName)

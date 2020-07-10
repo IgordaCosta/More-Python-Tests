@@ -26,7 +26,8 @@ def pdfToJpg(FolderLocation,PdfFileName,OutputFilename):
     PdfFileNameFinal=FolderLocation+PdfFileName
 
 
-
+    print('PdfFileNameFinal',PdfFileNameFinal)
+    
     images = convert_from_path(PdfFileNameFinal)
 
     
@@ -44,13 +45,13 @@ def pdfToJpg(FolderLocation,PdfFileName,OutputFilename):
 
 
 
-FolderLocation="C:\\Users\\IgorDC\\Downloads\\"
+# FolderLocation="C:\\Users\\IgorDC\\Downloads\\"
 
-PdfFileName="WeddingContract.pdf"
+# PdfFileName="WeddingContract.pdf"
 
-OutputFilename='PdfFileNameFinal'
-
-
+# OutputFilename='PdfFileNameFinal'
 
 
-pdfToJpg(FolderLocation=FolderLocation,PdfFileName=PdfFileName,OutputFilename=OutputFilename)
+
+
+# pdfToJpg(FolderLocation=FolderLocation,PdfFileName=PdfFileName,OutputFilename=OutputFilename)

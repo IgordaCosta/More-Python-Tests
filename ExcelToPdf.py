@@ -21,6 +21,8 @@ def ExcelToPdf(excelFileName,pdfFileName,excelFolderSavePath,pdfFolderSavePath):
         excel.Quit()
         print("DONE single Excel to Pdf")
 
+    return pdf_path
+
 
 # excelFileName='testFile.xlsx'
 

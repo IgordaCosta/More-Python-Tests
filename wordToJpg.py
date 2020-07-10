@@ -28,10 +28,10 @@ def wordToJpg(WordFileName,FolderLocation,OutputFilename):
 
 
 
-# WordFileName="Wedding-Photography-Contract.docx"
+WordFileName="Wedding-Photography-Contract.docx"
 
-# FolderLocation='C:\\Users\\IgorDC\\Desktop\\'
+FolderLocation='C:\\Users\\IgorDC\\Desktop\\'
 
-# OutputFilename='WordTojpgFile.jpg'
+OutputFilename='WordTojpgFile.jpg'
 
-# wordToJpg(WordFileName=WordFileName,FolderLocation=FolderLocation,OutputFilename=OutputFilename)
+wordToJpg(WordFileName=WordFileName,FolderLocation=FolderLocation,OutputFilename=OutputFilename)
