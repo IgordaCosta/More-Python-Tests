@@ -25,7 +25,7 @@ def CheckIfPixelColorIsBlack(Location,imageName):
 
 
 
-    (a, b, c, d)=pix[0,halfY]
+    (a, b, c)=pix[0,halfY]
 
 
 
@@ -35,8 +35,7 @@ def CheckIfPixelColorIsBlack(Location,imageName):
 
     print(c)
 
-    print(d)
-
+    
 
     if a<100 and b<100 and c<100:
         print("this pushes to black")
@@ -54,19 +53,19 @@ def CheckIfPixelColorIsBlack(Location,imageName):
 
 
 
-imageName='blackTest.png'
+# imageName='blackTest.png'
 
-Location="C:\\Users\\IgorDC\\Desktop\\"
-
-
-IfBlack=CheckIfPixelColorIsBlack(Location,imageName)
-
-  # Get the width and hight of the image for iterating over
-
-print("IfBlack= ",IfBlack)
+# Location="C:\\Users\\IgorDC\\Desktop\\"
 
 
+# IfBlack=CheckIfPixelColorIsBlack(Location,imageName)
 
-# print(pix[x,y])  # Get the RGBA Value of the a pixel of an image
-# pix[x,y] = value  # Set the RGBA Value of the image (tuple)
-# im.save('alive_parrot.png')
+#   # Get the width and hight of the image for iterating over
+
+# print("IfBlack= ",IfBlack)
+
+
+
+# # print(pix[x,y])  # Get the RGBA Value of the a pixel of an image
+# # pix[x,y] = value  # Set the RGBA Value of the image (tuple)
+# # im.save('alive_parrot.png')

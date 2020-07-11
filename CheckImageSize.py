@@ -1,31 +1,44 @@
 import CheckIfPixelColorIsBlack
 import resizeImage
-
+import RunImportImageMacro
 import imageSizeByMultiplicationValue
+import excelToJpg
+import placeImageOnTopAnother
 
 
 
 
-InitialValue=7.9
+# InitialValue=7.9
 
-Location= "C:\\Users\\IgorDC\\Desktop\\"
+# Location= "C:\\Users\\IgorDC\\Desktop\\"
 
-inputImageName="blackTest.png"
+# inputImageName="blackTest.png"
+
+# excelLocation=Location
+
+# excelFile="MacroTest.xlsx"
+
+# excelIntoImageFileName="excelIntoImage.png"
 
 # def CheckImageSize(InitialValue,Location,inputImageName,excelImageName,blackShowed=False,Finished=False):
-def CheckImageSize(InitialValue,Location,inputImageName,blackShowed=False,Finished=False):
+def CheckImageSize(InitialValue,Location,inputImageName,excelLocation,excelFile,excelIntoImageFileName,blackShowed=False,Finished=False):
 
     Imagewidth, Imageheight=imageSizeByMultiplicationValue.imageSizeByMultiplicationValue(MultiplicationValue=InitialValue)
 
     resizeImage.resizeImage(Location=Location,inputImageName=inputImageName,outputImageName=inputImageName,Imagewidth=Imagewidth,Imageheight=Imageheight)
 
     ##### here place the allblack image in excel background with a caracter in the upper middle column then
+    RunImportImageMacro.RunImportImageMacro(excelLocation=excelLocation,excelFile=excelFile,imageLocation=Location,imageFilename=inputImageName)
+
     ##### save excel document and make an image of it
+    imageName=excelToJpg.excelToJpg(excelFileName=excelFile,FolderLocation=excelLocation,OutputFilename=excelIntoImageFileName)
 
     # IfBlack=CheckIfPixelColorIsBlack.CheckIfPixelColorIsBlack(Location=Location,imageName=excelImageName)
-    IfBlack=CheckIfPixelColorIsBlack.CheckIfPixelColorIsBlack(Location=Location,imageName=inputImageName)
+    IfBlack=CheckIfPixelColorIsBlack.CheckIfPixelColorIsBlack(Location=excelLocation,imageName=imageName)
     
-
+    print('IfBlack: ',IfBlack)
+    print("blackShowed: ",blackShowed)
+    print("Finished: ",Finished)
     if IfBlack==False:
         if blackShowed:
             # InitialValue=InitialValue+0.1
@@ -52,13 +65,13 @@ def CheckImageSize(InitialValue,Location,inputImageName,blackShowed=False,Finish
 
 
 
-InitialValue, blackShowed, Finished=CheckImageSize(InitialValue,Location,inputImageName)
+# InitialValue, blackShowed, Finished=CheckImageSize(InitialValue,Location,inputImageName,excelLocation,excelFile,excelIntoImageFileName)
 
 
 
-print(InitialValue, blackShowed, Finished)
+# print(InitialValue, blackShowed, Finished)
 
-print("InitialValue, blackShowed, Finished")
+# print("InitialValue, blackShowed, Finished")
 
 
 

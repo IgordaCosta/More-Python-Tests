@@ -3,10 +3,10 @@ from PIL import Image
 
 
 
-def placeImageOnTopAnother(folderLocation,bottomImage,imagePlacedOnTop,OutputImageName):
+def placeImageOnTopAnother(bottomImagefolderLocation,topImagefolderLocation,bottomImage,imagePlacedOnTop,OutputImageName):
 
-    im1 = Image.open(folderLocation+bottomImage)
-    im2 = Image.open(folderLocation+imagePlacedOnTop)
+    im1 = Image.open(bottomImagefolderLocation+bottomImage)
+    im2 = Image.open(topImagefolderLocation+imagePlacedOnTop)
 
     back_im = im1.copy()
     back_im.paste(im2, (0, 0), im2)

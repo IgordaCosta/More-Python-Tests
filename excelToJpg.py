@@ -1,5 +1,6 @@
 import ExcelToPdf
 import pdfToJpg
+import os
 
 
 def excelToJpg(excelFileName,FolderLocation,OutputFilename):
@@ -8,26 +9,33 @@ def excelToJpg(excelFileName,FolderLocation,OutputFilename):
     pdfFileName=excelFileName.strip("."+remove)
 
     pdfFileName=pdfFileName+".pdf"
-
-
+    try:
+        os.remove(FolderLocation+pdfFileName)
+    except:
+        print("this file was already deleted or does not exist")
 
     (unnecessaryFile)=ExcelToPdf.ExcelToPdf(excelFileName=excelFileName,pdfFileName=pdfFileName,excelFolderSavePath=FolderLocation,pdfFolderSavePath=FolderLocation)
 
 
 
-    pdfToJpg.pdfToJpg(FolderLocation=FolderLocation,PdfFileName=pdfFileName,OutputFilename=OutputFilename)
+    OutputFinalFilename=pdfToJpg.pdfToJpg(FolderLocation=FolderLocation,PdfFileName=pdfFileName,OutputFilename=OutputFilename)
 
     print("unnecessaryFile: ",unnecessaryFile)
+    print("FolderLocation+pdfFileName",FolderLocation+pdfFileName)
+
+    os.remove(unnecessaryFile)
+
+    return OutputFinalFilename
 
 
 
 
-excelFileName="emptyExcelFile.xlsx"
+# excelFileName="emptyExcelFile.xlsx"
 
 
-FolderLocation="C:\\Users\\IgorDC\\Desktop\\"
+# FolderLocation="C:\\Users\\IgorDC\\Desktop\\"
 
-OutputFilename="emptyExcelJPGFile.jpg"
+# OutputFilename="emptyExcelJPGFile.jpg"
 
 
-excelToJpg(excelFileName,FolderLocation,OutputFilename)
+# excelToJpg(excelFileName,FolderLocation,OutputFilename)

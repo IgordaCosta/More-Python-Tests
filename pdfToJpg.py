@@ -30,15 +30,24 @@ def pdfToJpg(FolderLocation,PdfFileName,OutputFilename):
     
     images = convert_from_path(PdfFileNameFinal)
 
-    
+    filenames=[]
     i=0
     for page in images:
         i=i+1
-        pagefilename=FolderLocation +OutputFilename+"_"+str(i)+'.jpg'
+        newFileName=OutputFilename+"_"+str(i)+'.jpg'
+
+        pagefilename=FolderLocation +newFileName
+
         page.save(pagefilename, 'JPEG')
+        
+        filenames.append(newFileName)
         
 
     print("Done")
+    if i==1:
+        return newFileName
+    else:
+        return filenames
 
     
 
