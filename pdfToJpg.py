@@ -34,7 +34,10 @@ def pdfToJpg(FolderLocation,PdfFileName,OutputFilename):
     i=0
     for page in images:
         i=i+1
-        newFileName=OutputFilename+"_"+str(i)+'.jpg'
+        if len(images) >1:
+            newFileName=OutputFilename+"_"+str(i)+'.jpg'
+        else:
+            newFileName=OutputFilename+'.jpg'
 
         pagefilename=FolderLocation +newFileName
 
@@ -54,11 +57,11 @@ def pdfToJpg(FolderLocation,PdfFileName,OutputFilename):
 
 
 
-# FolderLocation="C:\\Users\\IgorDC\\Downloads\\"
+# FolderLocation="C:\\Users\\IgorDC\\Desktop\\"
 
 # PdfFileName="WeddingContract.pdf"
 
-# OutputFilename='PdfFileNameFinal'
+# OutputFilename='WeddingContract'
 
 
 

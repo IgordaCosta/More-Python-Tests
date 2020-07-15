@@ -108,6 +108,7 @@ def RunImportImageMacro(excelLocation,excelFile,imageLocation,imageFilename):
             .FirstPage.RightFooter.Text = ""
         End With
         ActiveWindow.View = xlPageLayoutView
+        Range("A1").Activate
         ActiveWindow.DisplayWhitespace = True
         Application.PrintCommunication = True
     End Sub
