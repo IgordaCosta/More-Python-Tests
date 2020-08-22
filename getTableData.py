@@ -8,9 +8,9 @@ import dropSqlTable
 import createSqliteTableFromList
 
 
-def GetAllTableNamesFromDatabase(Database):
-
-    changeDirectory.ChangeTokey()
+def GetAllTableNamesFromDatabase(Database,willChangeDirectory=True):
+    if willChangeDirectory:
+        changeDirectory.ChangeTokey()
 
 
     Exists=os.path.isfile(Database)
@@ -41,13 +41,13 @@ def GetAllTableNamesFromDatabase(Database):
     else:
         print("could not find file!")
 
-def GetTableDataFromTable(Database="AutoFormFiller.db",TableName='',TableNumber='',ErrorIfNotFound=True):
-
-    changeDirectory.ChangeTokey()
+def GetTableDataFromTable(Database="AutoFormFiller.db",TableName='',TableNumber='',ErrorIfNotFound=True, willChangeDirectory=True):
+    if willChangeDirectory:
+        changeDirectory.ChangeTokey()
     
 
     if TableNumber !='':
-        TableList=GetAllTableNamesFromDatabase(Database)
+        TableList=GetAllTableNamesFromDatabase(Database,willChangeDirectory=willChangeDirectory)
         TableName=TableList[TableNumber]
         print(TableName,"TableName used")
     
@@ -92,21 +92,22 @@ def GetTableDataFromTable(Database="AutoFormFiller.db",TableName='',TableNumber=
         return Datalist, names
 
 
-def getTables():
+def getTables(Database="AutoFormFiller.db",willChangeDirectory=True):
 
-    Database="AutoFormFiller.db"
+    # Database="AutoFormFiller.db"
 
-    GetAllTableNamesFromDatabase(Database=Database)
+    GetAllTableNamesFromDatabase(Database,willChangeDirectory=willChangeDirectory)
 
 
-def GetTableData(TableName='qqqqqqqrrrrrrSetValuesrrrrrrqqqqqqq',ErrorIfNotFound=True):
+def GetTableData(Database="AutoFormFiller.db",TableName='qqqqqqqrrrrrrSetValuesrrrrrrqqqqqqq',ErrorIfNotFound=True,willChangeDirectory=True):
 
-    TableName=TableName
-    Database="AutoFormFiller.db"
+    # TableName=TableName
+    # Database="AutoFormFiller.db"
 
     dictValue = {}
 
-    Datalist, names=GetTableDataFromTable(Database=Database,TableName=TableName,ErrorIfNotFound=ErrorIfNotFound)
+    Datalist, names=GetTableDataFromTable(Database=Database,TableName=TableName,ErrorIfNotFound=ErrorIfNotFound,willChangeDirectory=willChangeDirectory)
+    
     try: 
         Datalist=Datalist[0]
 
@@ -117,15 +118,15 @@ def GetTableData(TableName='qqqqqqqrrrrrrSetValuesrrrrrrqqqqqqq',ErrorIfNotFound
 
     return dictValue
 
-def GetDataFromDatabase(dataName):
-    dictValue=GetTableData()
+def GetDataFromDatabase(dataName,Database="AutoFormFiller.db",TableName='qqqqqqqrrrrrrSetValuesrrrrrrqqqqqqq',ErrorIfNotFound=True,willChangeDirectory=True):
+    dictValue=GetTableData(Database=Database,TableName=TableName,ErrorIfNotFound=ErrorIfNotFound,willChangeDirectory=willChangeDirectory)
 
     data=dictValue[dataName]
 
     return data
 
-def GetMultipleDataFromDatabase(dataNameList):
-    dictValue=GetTableData()
+def GetMultipleDataFromDatabase(dataNameList,Database="AutoFormFiller.db",TableName='qqqqqqqrrrrrrSetValuesrrrrrrqqqqqqq',ErrorIfNotFound=True,willChangeDirectory=True):
+    dictValue=GetTableData(Database=Database,TableName=TableName,ErrorIfNotFound=ErrorIfNotFound,willChangeDirectory=willChangeDirectory)
 
     Dictionary={}
     for i in range(len(dataNameList)):
@@ -135,8 +136,8 @@ def GetMultipleDataFromDatabase(dataNameList):
 
     return Dictionary
 
-def WriteDataDatabase(data,dataName):
-    Dictionary=GetTableData(ErrorIfNotFound=False)
+def WriteDataDatabase(data,dataName,Database="AutoFormFiller.db",TableName='qqqqqqqrrrrrrSetValuesrrrrrrqqqqqqq',willChangeDirectory=True):
+    Dictionary=GetTableData(ErrorIfNotFound=False,Database=Database,TableName=TableName,willChangeDirectory=willChangeDirectory)
     Dictionary[dataName]=data
 
     try:
@@ -150,8 +151,8 @@ def WriteDataDatabase(data,dataName):
 
 
 
-def MultipleListWriteDataDatabase(dataList,dataNameList):
-    Dictionary=GetTableData(ErrorIfNotFound=False)
+def MultipleListWriteDataDatabase(dataList,dataNameList,Database="AutoFormFiller.db",TableName='qqqqqqqrrrrrrSetValuesrrrrrrqqqqqqq',ErrorIfNotFound=True,willChangeDirectory=True):
+    Dictionary=GetTableData(ErrorIfNotFound=False,Database=Database,TableName=TableName,willChangeDirectory=willChangeDirectory)
     for i in range(len(dataNameList)):
         Dictionary[dataNameList[i]]=dataList[i]
 
@@ -165,8 +166,8 @@ def MultipleListWriteDataDatabase(dataList,dataNameList):
     createSqliteTableFromList.SetValues(Dictionary=Dictionary)
 
 
-def MultipleDictionaryWriteDataDatabase(DictionaryAdd):
-    Dictionary0=GetTableData(ErrorIfNotFound=False)
+def MultipleDictionaryWriteDataDatabase(DictionaryAdd,Database="AutoFormFiller.db",TableName='qqqqqqqrrrrrrSetValuesrrrrrrqqqqqqq',ErrorIfNotFound=True,willChangeDirectory=True):
+    Dictionary0=GetTableData(ErrorIfNotFound=False,Database=Database,TableName=TableName,willChangeDirectory=willChangeDirectory)
 
     Dictionary = dict(list(Dictionary0.items()) + list(DictionaryAdd.items()))
 
@@ -185,6 +186,8 @@ def MultipleDictionaryWriteDataDatabase(DictionaryAdd):
 
 # # getTables()
 
+# getTables(Database="AutoFormFiller.db",willChangeDirectory=True)
+
 # # GetTableDataFromTable(Database="AutoFormFiller.db",TableName='KEY_file1',TableNumber='')
 
 # # data=50
@@ -192,7 +195,19 @@ def MultipleDictionaryWriteDataDatabase(DictionaryAdd):
 
 # # WriteDataDatabase(data,dataName)
 
-# # GetTableData()
+dictValue=GetTableData(Database="AutoFormFiller.db",TableName='qqqqqqqrrrrrrSetValuesrrrrrrqqqqqqq',ErrorIfNotFound=True,willChangeDirectory=True)
+
+print(dictValue)
+
+# dataframe=dictValue["dataframe"]
+# try:
+#     dataframe=dictValue["datfdgsdgfaframe"]
+# except KeyError:
+#     print("the value doese not exist")
+
+# print("it continued")
+
+# print(dataframe)
 
 # # dropSqlTable.DropTable()
 # # dictValue=GetTableData()
