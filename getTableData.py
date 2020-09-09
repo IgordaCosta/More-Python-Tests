@@ -69,15 +69,15 @@ def GetTableDataFromTable(Database="AutoFormFiller.db",TableName='',TableNumber=
                 # print(row)
                 Datalist.append(list(row))
 
-            print(Datalist)
+            # print(Datalist)
 
-            print(Datalist[0][4])
+            # print(Datalist[0][4])
 
-            print('Datalist')
+            # print('Datalist')
 
-            print(names)
+            # print(names)
 
-            print("names")
+            # print("names")
 
         except Exception as e:
             print(e)
@@ -195,9 +195,19 @@ def MultipleDictionaryWriteDataDatabase(DictionaryAdd,Database="AutoFormFiller.d
 
 # # WriteDataDatabase(data,dataName)
 
-dictValue=GetTableData(Database="AutoFormFiller.db",TableName='qqqqqqqrrrrrrSetValuesrrrrrrqqqqqqq',ErrorIfNotFound=True,willChangeDirectory=True)
+# dictValue=GetTableData(Database="AutoFormFiller.db",TableName='FilesInDatabase',ErrorIfNotFound=True,willChangeDirectory=True)
+
+dictValue=GetTableData(Database="AutoFormFiller.db",ErrorIfNotFound=True,willChangeDirectory=True)
 
 print(dictValue)
+
+# print(dictValue["File Saved Location"])
+
+# data='abc'
+
+# dataName='rw'
+
+# WriteDataDatabase(data,dataName)
 
 # dataframe=dictValue["dataframe"]
 # try:
