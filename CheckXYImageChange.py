@@ -3,7 +3,9 @@ from PIL import Image, ImageFile
 import CheckChangeInSizeAndMovement
 
 
-
+# this file does the calculaion of the image change by making a lists of of dark areas versus light areas
+# (black and white), four lists one for x, then y, for white, and black, this will provide the position 
+# of black and white locations
 
 def CheckXYImageChange(imageH,ImageW,ChangedImageFolder,ChangedImageName):
 

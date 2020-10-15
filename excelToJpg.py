@@ -2,6 +2,8 @@ import ExcelToPdf
 import pdfToJpg
 import os
 
+# this file convests excel file to jpg file
+
 
 def excelToJpg(excelFileName,FolderLocation,OutputFilename):
 
@@ -14,18 +16,18 @@ def excelToJpg(excelFileName,FolderLocation,OutputFilename):
     except:
         print("this file was already deleted or does not exist")
 
-    (unnecessaryFile)=ExcelToPdf.ExcelToPdf(excelFileName=excelFileName,pdfFileName=pdfFileName,excelFolderSavePath=FolderLocation,pdfFolderSavePath=FolderLocation)
+    (unnecessaryFile,noError)=ExcelToPdf.ExcelToPdf(excelFileName=excelFileName,pdfFileName=pdfFileName,excelFolderSavePath=FolderLocation,pdfFolderSavePath=FolderLocation)
 
 
+    if noError:
+        OutputFinalFilename=pdfToJpg.pdfToJpg(FolderLocation=FolderLocation,PdfFileName=pdfFileName,OutputFilename=OutputFilename)
 
-    OutputFinalFilename=pdfToJpg.pdfToJpg(FolderLocation=FolderLocation,PdfFileName=pdfFileName,OutputFilename=OutputFilename)
+        print("unnecessaryFile: ",unnecessaryFile)
+        print("FolderLocation+pdfFileName",FolderLocation+pdfFileName)
 
-    print("unnecessaryFile: ",unnecessaryFile)
-    print("FolderLocation+pdfFileName",FolderLocation+pdfFileName)
+        os.remove(unnecessaryFile)
 
-    os.remove(unnecessaryFile)
-
-    return OutputFinalFilename
+    return OutputFinalFilename, noError
 
 
 

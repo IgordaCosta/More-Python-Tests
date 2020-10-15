@@ -2,7 +2,8 @@ import CheckXYImageChange
 import resizeImage
 
 
-
+# this files conmpares epecific two image files with the same size and returns its x and y diference in position
+# it uses an cross image file (the same files but one was preveosly converted into excel and back and the other stayed the same)
 
 def ComparingImages(imageH,ImageW,ChangedImageFolder,ChangedImageName,inputImageLocation,inputImageName,outputImageName):
 

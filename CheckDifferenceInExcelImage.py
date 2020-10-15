@@ -1,13 +1,24 @@
 import ComparingImages
 import excelToJpg
 
-def CheckDifferenceInExcelImage(excelFileName,FolderLocation,OutputFilename,imageH,ImageW,ChangedImageFolder,inputImageName,outputImageName):
+# this program turns an excel file with an image back into a pure image file and compares the converted to image file
+# to the original image file and finds the x and y difference which will probably exist
 
-    OutputFinalFilename=excelToJpg.excelToJpg(excelFileName=excelFileName,FolderLocation=FolderLocation,OutputFilename=OutputFilename)
-
-    RealXSubtraction, RealYSubtraction=ComparingImages.ComparingImages(imageH=imageH,ImageW=ImageW,ChangedImageFolder=FolderLocation,ChangedImageName=OutputFinalFilename,inputImageLocation=FolderLocation,inputImageName=inputImageName,outputImageName=outputImageName)
-
-    return RealXSubtraction, RealYSubtraction, OutputFinalFilename
+def CheckDifferenceInExcelImage(excelFileName,FolderLocation,OutputFilename,imageH,ImageW,ChangedImageFolder,inputImageName,outputImageName, OutputFilenameExcel=True):
+    
+    if OutputFilenameExcel:
+        OutputFinalFilename, noError=excelToJpg.excelToJpg(excelFileName=excelFileName,FolderLocation=FolderLocation,OutputFilename=OutputFilename)
+    else:
+        OutputFinalFilename=OutputFilename
+        noError=True
+    
+    if noError:
+        print("done first function")
+        RealXSubtraction, RealYSubtraction=ComparingImages.ComparingImages(imageH=imageH,ImageW=ImageW,ChangedImageFolder=FolderLocation,ChangedImageName=OutputFinalFilename,inputImageLocation=FolderLocation,inputImageName=inputImageName,outputImageName=outputImageName)
+    else:
+        RealXSubtraction, RealYSubtraction = '', ''
+        
+    return RealXSubtraction, RealYSubtraction, OutputFinalFilename, noError
 
 
 
@@ -44,4 +55,7 @@ def CheckDifferenceInExcelImage(excelFileName,FolderLocation,OutputFilename,imag
 
 
 
-# CheckDifferenceInExcelImage(excelFileName,FolderLocation,OutputFilename,imageH,ImageW,ChangedImageFolder,inputImageLocation,inputImageName,outputImageName)
+# # CheckDifferenceInExcelImage(excelFileName,FolderLocation,OutputFilename,imageH,ImageW,ChangedImageFolder,inputImageLocation,inputImageName,outputImageName)
+# RealXSubtraction, RealYSubtraction, OutputFinalFilename, noError=CheckDifferenceInExcelImage(excelFileName,FolderLocation,OutputFilename,imageH,ImageW,ChangedImageFolder,inputImageName,outputImageName)
+
+# print(RealXSubtraction, RealYSubtraction, OutputFinalFilename, noError)

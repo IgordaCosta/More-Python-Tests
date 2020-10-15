@@ -195,11 +195,12 @@ def MultipleDictionaryWriteDataDatabase(DictionaryAdd,Database="AutoFormFiller.d
 
 # # WriteDataDatabase(data,dataName)
 
-# dictValue=GetTableData(Database="AutoFormFiller.db",TableName='FilesInDatabase',ErrorIfNotFound=True,willChangeDirectory=True)
+# dictValue=GetTableData(Database="AutoFormFiller.db",TableName='FontAndItsSize',ErrorIfNotFound=True,willChangeDirectory=True)
 
 dictValue=GetTableData(Database="AutoFormFiller.db",ErrorIfNotFound=True,willChangeDirectory=True)
 
 print(dictValue)
+
 
 # print(dictValue["File Saved Location"])
 

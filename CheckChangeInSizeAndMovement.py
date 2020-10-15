@@ -2,7 +2,7 @@ import CreateBlackCross
 import RunImportImageMacro
 import excelToJpg
 
-
+#this program gets an image and an exel file and imports the image into the excel file
 
 def CheckChangeInSizeAndMovement(excelLocation,excelFile,imageLocation,inputImageName,excelIntoImageFileName):
 
@@ -18,6 +18,12 @@ def CheckChangeInSizeAndMovement(excelLocation,excelFile,imageLocation,inputImag
 
 # imageLocation="C:\\Users\\IgorDC\\Desktop\\"
 # excelLocation="C:\\Users\\IgorDC\\Desktop\\"
+
+
+# imageLocation="C:\\Users\\IgorDC\\Desktop\\JpgImageTest\\"
+
+# excelLocation=imageLocation
+
 # excelFile="MacroTest.xlsx"
 
 # inputImageName='BlackCross.jpg'

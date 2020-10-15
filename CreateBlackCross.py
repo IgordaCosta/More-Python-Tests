@@ -6,7 +6,12 @@ from PIL import Image, ImageDraw
 imageH=980
 ImageW=758
 
-Location="C:\\Users\\IgorDC\\Desktop\\"
+# Location="C:\\Users\\IgorDC\\Desktop\\"
+
+
+Location="C:\\Users\\IgorDC\\Desktop\\JpgImageTest\\"
+
+
 ImageName="BlackCross.jpg"
 
 
