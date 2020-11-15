@@ -38,11 +38,22 @@ def data_entry(Database,TableName,ColumnsList,ValuesList):
     conn = sqlite3.connect(Database) 
     c = conn.cursor() 
 
+    ColumnsList=list(ColumnsList)
 
+    ValuesList=list(ValuesList)
+    
     string1=" ( "
     string2=" VALUES ( "
     for i in range(len(ColumnsList)):
         print(i)
+
+
+        ColumnsList[i] = ColumnsList[i].replace("'", '"')
+
+        ValuesList[i] = ValuesList[i].replace("'", '"')
+
+
+
         string1=string1+str(ColumnsList[i]) +", "
 
         string2=string2+"'"+str(ValuesList[i])+"'"+", "
