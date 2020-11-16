@@ -196,10 +196,12 @@ def MultipleDictionaryWriteDataDatabase(DictionaryAdd,Database="AutoFormFiller.d
 # # WriteDataDatabase(data,dataName)
 
 # dictValue=GetTableData(Database="AutoFormFiller.db",TableName='FontAndItsSize',ErrorIfNotFound=True,willChangeDirectory=True)
+import pprint
 
 dictValue=GetTableData(Database="AutoFormFiller.db",ErrorIfNotFound=True,willChangeDirectory=True)
 
-print(dictValue)
+pp = pprint.PrettyPrinter(indent=4)
+pp.pprint(dictValue)
 
 
 # print(dictValue["File Saved Location"])
