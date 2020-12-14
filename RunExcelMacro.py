@@ -5,7 +5,7 @@ import RemoveMacroFromSheet
 
 
 
-def RunExcelMacro(Location,excelFile,MacroName,Macro):
+def RunExcelMacro(Location,excelFile,MacroName,Macro,SaveChanges=1):
     
     macroAdded=False
     path=Location
@@ -47,7 +47,7 @@ def RunExcelMacro(Location,excelFile,MacroName,Macro):
         RemoveMacroFromSheet.RemoveMacroFromSheet(excelApp=excel,excelWorkbook=workbook)
 
         # save the workbook and close
-        excel.Workbooks(1).Close(SaveChanges=1)
+        excel.Workbooks(1).Close(SaveChanges=SaveChanges)
         excel.Application.Quit()
 
         # garbage collection
