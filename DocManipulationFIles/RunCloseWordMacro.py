@@ -2,7 +2,7 @@ import RunExcelMacro
 
 
 
-def RunMergeCellsMacro(Location,excelFile,WordFile):
+def RunCloseWordMacro(Location,excelFile,WordFile):
 
     
     MacroName="Macro1"
@@ -40,4 +40,4 @@ MacroName="Macro1"
 WordFile="C:\\Users\\IgorDC\\Desktop\\barra De Progresso Igor 2.docx"
 
 
-RunMergeCellsMacro(Location,excelFile,WordFile)
+RunCloseWordMacro(Location,excelFile,WordFile)
