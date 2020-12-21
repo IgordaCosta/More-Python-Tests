@@ -1,6 +1,8 @@
 import docx
 from docx import Document
 
+import IfWordInTextRemoveAll
+
 def getText(filename):
     doc = docx.Document(filename)
     fullText = []
@@ -16,12 +18,17 @@ text=getText(filename=filename)
 
 # print(text)
 
-print(len(text))
+# print("text 1 above")
 
-print('initial size above')
+# print(len(text))
+
+# print('initial size above')
 
 
-splitter='XXXXXXXXXXX'
+splitterTable='XXXXXXXXXXX'
+
+InputSplitter=' ' + splitterTable
+
 
 filename2='C:\\Users\\IgorDC\\Desktop\\PydocTest\\TestChanged.docx'
 
@@ -29,7 +36,65 @@ text2=getText(filename=filename2)
 
 # print(text2)
 
-# Text2Lists=text2.split(splitter)
+# print("text 2 above")
+
+# print("initially text 1 == test 2 ?", text==text2 )
+
+text3 = text2
+
+text3 = text3.replace(InputSplitter, "")
+
+# print("after text 1 == test 3 ?", text==text3 )
+
+# print('after text2==text3 ?' , text2==text3)
+
+OnlyLocationMaquerAddedCheck = text==text3
+
+print('OnlyLocationMaquerAddedCheck :',OnlyLocationMaquerAddedCheck)
+
+if OnlyLocationMaquerAddedCheck:
+
+    word = InputSplitter
+
+    stringUsed = text2
+
+    ListOfNumLocations = IfWordInTextRemoveAll.IfWordInTextRemoveAll(word, stringUsed , ListOfWordPositions = [])
+
+    print(ListOfNumLocations)
+
+
+
+
+
+
+
+
+    # NumWord = FindNumberWordInString.FindNumberWordInString(word=word , stringUsed=stringUsed)
+
+    # print('NumWord: ',NumWord)
+
+    # WordLocationList = []
+    # # for i in range(NumWord):
+    # result = text2.find(word) 
+
+    # print(result)
+
+    # text3=text2.replace(word,"",1)
+
+    # NumWord = FindNumberWordInString.FindNumberWordInString(word=word , stringUsed=text3)
+
+    # print('NumWord: ',NumWord)
+
+
+
+    
+
+
+
+
+    
+
+# Text2Lists=text2.split(splitterTable)
 
 # sizes=[]
 # AllNewLength=0
@@ -60,9 +125,9 @@ indexList=[]
 # cellNumber=0
 
 
-print(len(wordDoc.tables))
+# print(len(wordDoc.tables))
 
-print('len(wordDoc.tables)')
+# print('len(wordDoc.tables)')
 
 
 
@@ -76,18 +141,18 @@ tableNumber=0
 
 for table in wordDoc.tables:
 
-    print('len(wordDoc.tables): '+ str(len(wordDoc.tables)))
+    # print('len(wordDoc.tables): '+ str(len(wordDoc.tables)))
     
 
-    print('tableNumber: ' + str(tableNumber))
+    # print('tableNumber: ' + str(tableNumber))
 
     
     rowNumber=0
     for row in table.rows:
 
-        print("len(table.rows): " + str(len(table.rows)))
+        # print("len(table.rows): " + str(len(table.rows)))
         
-        print('rowNumber: ' + str(rowNumber))
+        # print('rowNumber: ' + str(rowNumber))
 
         
         
@@ -95,15 +160,15 @@ for table in wordDoc.tables:
         cellNumber=0
         for cell in row.cells:
 
-            print('len(row.cells) :' + str(len(row.cells)))
+            # print('len(row.cells) :' + str(len(row.cells)))
             
-            print('cellNumber: ' + str(cellNumber))
+            # print('cellNumber: ' + str(cellNumber))
 
             
             
 
-            print(cell.text)
-            if cell.text == splitter:
+            # print(cell.text)
+            if cell.text == splitterTable:
                 indexNumber=indexNumber+1
                 TableRowCell.append([tableNumber,rowNumber,cellNumber])
                 indexList.append(indexNumber)
@@ -119,9 +184,9 @@ print(TableRowCell)
 
 print('TableRowCell above')
 
-print(indexList)
+# print(indexList)
 
-print('indexList above')
+# print('indexList above')
 
 
 
