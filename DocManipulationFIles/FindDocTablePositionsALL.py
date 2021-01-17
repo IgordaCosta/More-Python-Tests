@@ -82,10 +82,10 @@ def FindDocTablePositionsALL(filename):
 
 
 
-PositionList = FindDocTablePositionsALL(filename)
+# PositionList = FindDocTablePositionsALL(filename)
 
 
-pprint.pprint(PositionList)
+# pprint.pprint(PositionList)
 
 
-print("Done")
+# print("Done")
