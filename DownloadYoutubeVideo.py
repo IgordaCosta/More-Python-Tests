@@ -2,7 +2,7 @@ from pytube import YouTube
 
 
 
-VideoUrl = '           https://youtu.be/9-uKQtAjutw             '.strip()
+VideoUrl = '           https://www.facebook.com/olhardigital/videos/2847883375500570/             '.strip()
 
 
 output_path = 'C:\\Users\\IgorDC\\Desktop\\YouTubeVideoSaveLocation\\'
