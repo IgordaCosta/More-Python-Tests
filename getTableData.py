@@ -203,6 +203,8 @@ dictValue=GetTableData(Database="AutoFormFiller.db",ErrorIfNotFound=True,willCha
 pp = pprint.PrettyPrinter(indent=4)
 pp.pprint(dictValue)
 
+print('LocationToAddFileOnApp :',str(dictValue['LocationToAddFileOnApp']))
+
 
 # print(dictValue["File Saved Location"])
 
