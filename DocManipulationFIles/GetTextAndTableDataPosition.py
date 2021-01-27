@@ -2,26 +2,6 @@ from docx import Document
 
 
 
-
-
-# def appendTableValue(tableTextLocations,LengthOfWordToCheck,totalLengthTableWords):
-#     # AmountOfTimesWordApeared = len(tableTextLocations)+1
-
-#     # AmountOfLettersToGoBack= LengthOfWordToCheck * AmountOfTimesWordApeared
-
-#     # tableTextLocations.append(totalLengthTableWords - AmountOfLettersToGoBack)
-#     tableTextLocations.append(totalLengthTableWords)
-
-def appendTableValueSimlified(tableTextLocationsSimplified,LengthOfWordToCheck,totalLengthTableWords):
-    AmountOfTimesWordApeared = len(tableTextLocationsSimplified)+1
-
-    AmountOfLettersToGoBack= LengthOfWordToCheck * AmountOfTimesWordApeared
-
-    tableTextLocationsSimplified.append(totalLengthTableWords - AmountOfLettersToGoBack)
-
-
-
-
 def GetTextAndTableDataPosition(wordDocunent,WordToCheck):
 
     document = Document(wordDocunent)
@@ -29,97 +9,69 @@ def GetTextAndTableDataPosition(wordDocunent,WordToCheck):
     LengthOfWordToCheck = len(WordToCheck)
 
     #to get text letter locations
-
-    file1 = open(r"C:\Users\IgorDC\Desktop\PydocTest\testFile.txt","w")#write mode 
-    
-
-
     WordTextLocations=[]
     totalLengthWords=0
     for paragraph in document.paragraphs:
         for letter in paragraph.text:
 
-            
-        
             totalLengthWords = totalLengthWords + 1 
-            file1.write('letter: '+str(letter)+ '  totalLengthWords:  '+str(totalLengthWords) + "\n") 
-            # print(letter, totalLengthWords)
+
             if WordToCheck == letter:
-
-                AmountOfTimesWordApeared = len(WordTextLocations)+1
-
-                AmountOfLettersToGoBack= LengthOfWordToCheck * AmountOfTimesWordApeared
-
-                # WordTextLocations.append(totalLengthWords - AmountOfLettersToGoBack)
 
                 WordTextLocations.append(totalLengthWords)
 
 
-    file1.close() 
     # To get table data letter locations
-
-    lastLetter = ''
     tableTextLocations = []
     tableTextLocationsSimplified = []
     totalLengthTableWords=0
-    totalLengthTableWordsOld=0
+
     Cellsize = 1
     for table in document.tables:
         for row in table.rows:
             for cell in row.cells:
 
                 CellText=cell.text
-                print(CellText)
+                # print(CellText)
                 
-                # step = 0
                 for letter in CellText:
                 
                     # print(word.text)
                     LengthOfWordToCheck = 1
                     totalLengthTableWords = totalLengthTableWords + LengthOfWordToCheck
-
-                    step = 0
                     
                     if WordToCheck == letter:
-                        # if letter == lastLetter:
-                        #     lastLetter = ''
-                        #     totalLengthTableWords = totalLengthTableWords - LengthOfWordToCheck
-                        # else:
-                        #     # print('letter: ',letter)
-                        #     appendTableValueSimlified(tableTextLocationsSimplified,LengthOfWordToCheck,totalLengthTableWords)
-                        
-                       
+
                         sizeOftableTextLocations = len(tableTextLocations)
 
                         if sizeOftableTextLocations == 0:
-                            
-                            totalLengthTableWordsOld = totalLengthTableWords
 
                             tableTextLocations.append(totalLengthTableWords)
 
                         else:
 
-                            oldtableTextLocationsValue = tableTextLocations[sizeOftableTextLocations - 1]
+                            oldtableTextLocationsValue = tableTextLocations[-1]
                             
-
                             tableTextLocations.append(totalLengthTableWords)
 
                             if oldtableTextLocationsValue + 1 == totalLengthTableWords:
                                 Cellsize = Cellsize + 1
+
                             else:
                                 tableTextLocationsSimplified.append(Cellsize)
+                                # print('Cellsize: ',Cellsize)
                                 Cellsize = 1
 
-                            totalLengthTableWordsOld = totalLengthTableWords
+                            # print('Cellsize: ',Cellsize)
+                            # print('tableTextLocations: ',totalLengthTableWords)
 
 
-                    # step = step + 1
+            
+
+    #THIS IS THE LAST VALUE TO APPEND
+    tableTextLocationsSimplified.append(Cellsize)
 
 
-                    # lastLetter = letter
-
-                        
-    # print(len(WordTextLocations)+len(tableTextLocations))
 
     return WordTextLocations, tableTextLocations, tableTextLocationsSimplified
 
