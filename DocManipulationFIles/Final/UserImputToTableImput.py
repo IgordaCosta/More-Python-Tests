@@ -1,11 +1,5 @@
 import pprint
 
-tableTextLocationsSimplified =  [8, 7, 3, 3, 1, 3, 3, 8, 7, 1, 1]
-
-UserImput = ["AddedInput_:"+str(tableTextLocationsSimplified[i])+"#"+str(i+1)+"__XXXXXX" for i in range(len(tableTextLocationsSimplified))]
-
-# UserImput = [2,3]
-
 
 def UserImputToTableImput(tableTextLocationsSimplified, UserImput):
 
@@ -24,10 +18,22 @@ def UserImputToTableImput(tableTextLocationsSimplified, UserImput):
         return "UserInputSizeError"
 
 
-UserInputFinal = UserImputToTableImput(tableTextLocationsSimplified, UserImput)
 
 
-pprint.pprint('UserInputFinal: '+str(UserInputFinal))
+
+
+
+# tableTextLocationsSimplified =  [8, 7, 3, 3, 1, 3, 3, 8, 7, 1, 1]
+
+# UserImput = ["AddedInput_:"+str(tableTextLocationsSimplified[i])+"#"+str(i+1)+"__XXXXXX" for i in range(len(tableTextLocationsSimplified))]
+
+# UserImput = [2,3]
+
+
+# UserInputFinal = UserImputToTableImput(tableTextLocationsSimplified, UserImput)
+
+
+# pprint.pprint('UserInputFinal: '+str(UserInputFinal))
 
 
 
