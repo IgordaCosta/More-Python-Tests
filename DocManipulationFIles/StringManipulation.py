@@ -1,31 +1,31 @@
 
 
 
-# StrinTested = 'ThRisISMyTest'
+StrinTested = 'ThRisISMyTest'
 
-# # row.cells[i].text = row.cells[i].text[letter+1:] + itenToAdd + row.cells[i].text[:letter]
+# row.cells[i].text = row.cells[i].text[letter+1:] + itenToAdd + row.cells[i].text[:letter]
 
-# # row.cells[i].text = row.cells[i].text[:letter] + itenToAdd + row.cells[i].text[letter+1:]
+# row.cells[i].text = row.cells[i].text[:letter] + itenToAdd + row.cells[i].text[letter+1:]
 
-# StrinTestedFinal = StrinTested[:2] +"XXXXXXX" + StrinTested[2+1:]
+StrinTestedFinal = StrinTested[:2] +"XXXXXXX" + StrinTested[2+1:]
 
-# StrinTested1 = StrinTested[:2]
-
-
-# StrinTested2 = StrinTested[2+1:]
-
-# print(StrinTested1)
-
-# print(StrinTested2)
+StrinTested1 = StrinTested[:2]
 
 
-# print(StrinTestedFinal)
+StrinTested2 = StrinTested[2+1:]
+
+print(StrinTested1)
+
+print(StrinTested2)
 
 
-listUsed = []
+print(StrinTestedFinal)
 
-value = 'car'
 
-listUsed.append(value)
+# listUsed = []
 
-print(listUsed)
+# value = 'car'
+
+# listUsed.append(value)
+
+# print(listUsed)
