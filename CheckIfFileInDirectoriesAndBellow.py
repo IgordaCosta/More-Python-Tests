@@ -144,7 +144,9 @@ def CheckIfInFilePath(startPath,FileNameCheck, itemToCheck, savePath,MbLowLimit=
 
 #C:\
 
-startPath = r'C:\Program Files\LibreOffice'
+# startPath = r'C:\Program Files\LibreOffice'
+
+startPath = r'C:\ProgramData\Anaconda3'
 
 savePath = r'C:\Users\IgorDC\Desktop\FileSizes\PandasFilesizeDriveC.csv'
 
@@ -156,13 +158,13 @@ First = 1
 
 Second = 2
 
-FileNameCheck = True
+FileNameCheck = False
 
-itemToCheck = 'python.exe'
+itemToCheck = 'docx'
 
-FileNameLongLowerInterVal=-2
+FileNameLongLowerInterVal=-3
 
-FileNameLongHigherInterVal=-1
+FileNameLongHigherInterVal=-2
 
 # getDirSize(startPath,savePath,MbLowLimit,CheckExtension)
 
