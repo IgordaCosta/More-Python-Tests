@@ -39,6 +39,8 @@ def GetTextOnlyDataPositions(wordDocunent,WordToCheck, document, ParagraphAndTab
     for y in range(len(document.paragraphs)):
         paragraph = document.paragraphs[y]
 
+        print(paragraph.text)
+
         for x in range(len(paragraph.text)):
             letter = paragraph.text[x]
 
@@ -173,9 +175,18 @@ def GetTextAndTableDataPosition(wordDocunent,WordToCheck, docFile=True, docSaveF
 
 WordToCheck= 'Ÿ'
 
+# WordToCheck= ' Ÿ'
+
 # wordDocunent = r'C:\Users\IgorDC\Desktop\PydocTest\TestChanged5.docx'
 
-wordDocunent = r'C:\Users\IgorDC\Desktop\PydocTest\TestChanged12.docx'
+# wordDocunent = r'C:\Users\IgorDC\Desktop\PydocTest\TestChanged12.docx'
+
+# wordDocunent = r'C:\Users\IgorDC\Desktop\PydocTest\DifferentStylesTestChangedTNR16_3.docx'
+
+
+# wordDocunent = r'C:\Users\IgorDC\Desktop\PydocTest\DifferentStylesTestChangedTNR16_3_WithCode.docx'
+
+wordDocunent = r'C:\Users\IgorDC\Desktop\PydocTest\DifferentStylesTestChangedTNR16_3_WithCode2.docx'
 
 docSaveFileName = r"C:\Users\IgorDC\Desktop\PydocTest\testFile.txt"
 

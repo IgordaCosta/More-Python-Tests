@@ -1,0 +1,68 @@
+1
+24
+23
+21
+30
+25
+7
++0================================
+1
+25
+48
+69
+99
+124
+131
++1================================
+1
+26
+49
+70
+100
+125
+132
++15================================
+1
+40
+63
+84
+114
+139
+146
+Original========================= 
+'2.25', '2.49', '2.71', '2.102', '2.128'
+                                                       [change number starts at 1]    a partir da primeira mudança se faz len(word) -1
+1                              (+1 changes)                   1   (+16 changes)
+25                             -1                             40    +15	}	-1     15 =   16 - 1   =>>>> 16 - (changeNumber)      
+49                              0                             63    +14	}	-1     14 =   16 - 2   =>>>> 16 - (changeNumber)
+71                              1                             84    +13	}	-1     13 =   16 - 3   =>>>> 16 - (changeNumber)
+102                             2                             114   +12	}	-1     12 =   16 - 4   =>>>> 16 - (changeNumber)
+128                             3                             139   +11	}	-1     11 =   16 - 5   =>>>> 16 - (changeNumber)
+
+
+
+1                                1                                -
+25                               25                               25
+49                               49 + 16 - 1         49 + 15   =  64
+71                               71 + 16 - 2         71 + 14   =  85
+102                              102 + 16 - 3        102 + 13  =  115
+128                              128 + 16 - 4        128 + 12  =  140
+
+
+
+ ÇÇÇÇÇÇÇÇÇÇÇÇÇÇÇ
+
+
+[
+
+AAA Photography Studios Ÿ], located at [Address Ÿ], agrees to provide Ÿ wedding photography services Ÿ to the client(s) listed Ÿ below.
+
+
+
+
+[
+
+AAA Photography Studios  ÇÇÇÇÇÇÇÇÇÇÇÇÇÇÇ], located at [Address  ÇÇÇÇÇÇÇÇÇÇÇÇÇÇÇ], agrees to provide Ÿ wedding photography services  ÇÇÇÇÇÇÇÇÇÇÇÇÇÇÇ to the client(s) listed  ÇÇÇÇÇÇÇÇÇÇÇÇÇÇÇ below.
+
+
+

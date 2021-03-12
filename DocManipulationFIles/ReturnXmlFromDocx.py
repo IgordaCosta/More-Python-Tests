@@ -147,12 +147,12 @@ def ReturnXmlFromDocx(src_path, dst_path, on_error="ignore"):
 
 
 
-Location =  r'C:\Users\IgorDC\Desktop\PydocTest' + '//'
+# Location =  r'C:\Users\IgorDC\Desktop\PydocTest' + '//'
 
-file_name_input = Location + 'DifferentStylesTestChanged.docx' 
+# file_name_input = Location + 'DifferentStylesTestChanged.docx' 
 
-file_name_output = Location + 'DifferentStylesTestChanged.xml' 
+# file_name_output = Location + 'DifferentStylesTestChanged.xml' 
 
-ReturnedXml = ReturnXmlFromDocx(file_name_input, file_name_output)
+# ReturnedXml = ReturnXmlFromDocx(file_name_input, file_name_output)
 
-print(ReturnedXml)
+# print(ReturnedXml)
