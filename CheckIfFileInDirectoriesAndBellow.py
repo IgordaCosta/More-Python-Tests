@@ -158,9 +158,9 @@ First = 1
 
 Second = 2
 
-FileNameCheck = False
+FileNameCheck = True
 
-itemToCheck = 'docx'
+itemToCheck = 'difflib.py'
 
 FileNameLongLowerInterVal=-3
 
