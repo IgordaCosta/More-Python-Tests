@@ -9,11 +9,14 @@ def GetSentenceLetterLocation(sentence, y = -1, docFile=True, doc =''):
 
             if WordToCheck == letter:
                 if docFile:
-                    doc.write('letter: '+ str(letter) +"\n")
-                    doc.write('Paragraphs y: '+ str(y) +"\n") 
-                    doc.write('sentence x: '+ str(x) +"\n") 
+                    try:
+                        doc.write('letter: '+ str(letter) +"\n")
+                        doc.write('Paragraphs y: '+ str(y) +"\n") 
+                        doc.write('sentence x: '+ str(x) +"\n") 
 
-                    doc.write('==============================================='+"\n") 
+                        doc.write('==============================================='+"\n") 
+                    except:
+                        pass
                 if y == -1:
                     ParagraphSentenceLocation = str(x)
                 else:
@@ -26,8 +29,8 @@ def GetSentenceLetterLocation(sentence, y = -1, docFile=True, doc =''):
 
 
 
-
-def GetTextOnlyDataPositions(wordDocunent,WordToCheck, document, ParagraphAndTableData=True, docFile=True, doc =''):
+# wordDocunent,WordToCheck, document,doc, docFile=False, ParagraphAndTableData=True
+def GetTextOnlyDataPositions(wordDocunent,WordToCheck, document,doc,docFile=True, ParagraphAndTableData=True):
 
     if ParagraphAndTableData:
         pass
@@ -39,18 +42,21 @@ def GetTextOnlyDataPositions(wordDocunent,WordToCheck, document, ParagraphAndTab
     for y in range(len(document.paragraphs)):
         paragraph = document.paragraphs[y]
 
-        print(paragraph.text)
+        # print(paragraph.text)
 
         for x in range(len(paragraph.text)):
             letter = paragraph.text[x]
 
             if WordToCheck == letter:
                 if docFile:
-                    doc.write('letter: '+ str(letter) +"\n")
-                    doc.write('Paragraphs y: '+ str(y) +"\n") 
-                    doc.write('sentence x: '+ str(x) +"\n") 
+                    try:
+                        doc.write('letter: '+ str(letter) +"\n")
+                        doc.write('Paragraphs y: '+ str(y) +"\n") 
+                        doc.write('sentence x: '+ str(x) +"\n") 
 
-                    doc.write('==============================================='+"\n") 
+                        doc.write('==============================================='+"\n") 
+                    except:
+                        pass
 
                 ParagraphSentenceLocation = str(y) + "." + str(x)
 
@@ -62,8 +68,8 @@ def GetTextOnlyDataPositions(wordDocunent,WordToCheck, document, ParagraphAndTab
 
 
 
-
-def GetTableDataOnlyPositions(wordDocunent,WordToCheck, document, ParagraphAndTableData=True, docFile=True, doc =''):
+# wordDocunent,WordToCheck, document,doc, docFile=False, ParagraphAndTableData=True
+def GetTableDataOnlyPositions(wordDocunent,WordToCheck, document,doc, docFile=True, ParagraphAndTableData=True):
 
     if ParagraphAndTableData:
         pass
@@ -115,17 +121,20 @@ def GetTableDataOnlyPositions(wordDocunent,WordToCheck, document, ParagraphAndTa
                         # print(ToAddWordYXLocations)
 
                     if docFile:
-                        doc.write('Table y: '+ str(y) +"\n") 
-                        doc.write('Row x: '+ str(x) +"\n") 
-                        doc.write('Row Cell [i]: '+ str(i) +"\n") 
-                        doc.write('totalLengthTableWords: '+str(totalLengthTableWords) +"\n") 
-                        doc.write('row.cells[i].text: '+ row.cells[i].text +"\n") 
-                        doc.write('LengthOfCellText: '+ LengthOfCellText +"\n") 
-                        doc.write('letter in number: '+ str(letter)+"/"+str(RowTextLength-1) +"\n")
-                        doc.write('letter: '+ str(row.cells[i].text[letter]) +"\n")
-                        doc.write('up till letter: '+ str(row.cells[i].text[:letter +1]) +"\n")
-                        
-                        doc.write('============================================='+"\n")
+                        try:
+                            doc.write('Table y: '+ str(y) +"\n") 
+                            doc.write('Row x: '+ str(x) +"\n") 
+                            doc.write('Row Cell [i]: '+ str(i) +"\n") 
+                            doc.write('totalLengthTableWords: '+str(totalLengthTableWords) +"\n") 
+                            doc.write('row.cells[i].text: '+ row.cells[i].text +"\n") 
+                            doc.write('LengthOfCellText: '+ LengthOfCellText +"\n") 
+                            doc.write('letter in number: '+ str(letter)+"/"+str(RowTextLength-1) +"\n")
+                            doc.write('letter: '+ str(row.cells[i].text[letter]) +"\n")
+                            doc.write('up till letter: '+ str(row.cells[i].text[:letter +1]) +"\n")
+                            
+                            doc.write('============================================='+"\n")
+                        except:
+                            pass
 
                     
                     if WordToCheck == str(row.cells[i].text[letter]):
@@ -151,11 +160,11 @@ def GetTextAndTableDataPosition(wordDocunent,WordToCheck, docFile=True, docSaveF
 
 
     # To get table data locations
-    TableYXILocation = GetTableDataOnlyPositions(wordDocunent,WordToCheck, document, ParagraphAndTableData=True, docFile=True, doc = doc)
+    TableYXILocation = GetTableDataOnlyPositions(wordDocunent,WordToCheck, document,doc, docFile=False, ParagraphAndTableData=True)
 
 
     # To get text letter locations
-    WordYXLocations = GetTextOnlyDataPositions(wordDocunent,WordToCheck, document, ParagraphAndTableData=True, docFile=False, doc = doc)
+    WordYXLocations = GetTextOnlyDataPositions(wordDocunent,WordToCheck, document,doc, docFile=False , ParagraphAndTableData=True)
 
     
     
@@ -181,16 +190,18 @@ WordToCheck= 'Ÿ'
 
 # wordDocunent = r'C:\Users\IgorDC\Desktop\PydocTest\TestChanged12.docx'
 
+wordDocunent = r'C:\Users\IgorDC\Desktop\PydocTest\TestChanged13.docx'
+
 # wordDocunent = r'C:\Users\IgorDC\Desktop\PydocTest\DifferentStylesTestChangedTNR16_3.docx'
 
 
 # wordDocunent = r'C:\Users\IgorDC\Desktop\PydocTest\DifferentStylesTestChangedTNR16_3_WithCode.docx'
 
-wordDocunent = r'C:\Users\IgorDC\Desktop\PydocTest\DifferentStylesTestChangedTNR16_3_WithCode2.docx'
+# wordDocunent = r'C:\Users\IgorDC\Desktop\PydocTest\DifferentStylesTestChangedTNR16_3_WithCode2.docx'
 
 docSaveFileName = r"C:\Users\IgorDC\Desktop\PydocTest\testFile.txt"
 
-docFile = True
+docFile = False
 
 
 
@@ -208,10 +219,12 @@ WordYXLocations , TableYXILocation = GetTextAndTableDataPosition(wordDocunent = 
 
 pprint.pprint('WordYXLocations: ') 
 
-print(WordYXLocations)
+pprint.pprint(WordYXLocations)
 
 
 pprint.pprint('TableYXILocation: ')
+
+# pprint.pprint(TableYXILocation)
 
 print(TableYXILocation)
 
