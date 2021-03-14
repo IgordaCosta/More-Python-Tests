@@ -6,15 +6,15 @@ import datetime
 import DeleteUniqueElements
 
 import pprint
-
-def CheckIfInFilePath(startPath,FileNameCheck, itemToCheck, savePath,MbLowLimit=5,CheckExtension='0',FindAll=False, First=1,Second=2,FileNameLongLowerInterVal=-2, FileNameLongHigherInterVal=-1):
+                        
+def CheckIfInFilePath(startPath,FileNameCheck, itemToCheck, ExtensionOnly, savePath,MbLowLimit=5,CheckExtension='0', First=1,Second=2,FileNameLongLowerInterVal=-2, FileNameLongHigherInterVal=-1):
 
     NOerrorGotten = True
     # print('FindAll: ', FindAll)
 
     startTime = datetime.datetime.now()
 
-    CheckExtension=str(CheckExtension).lower()
+    # CheckExtension=str(CheckExtension).lower()
     # total_size = 0
     fileNamePathList = [] 
     fileSizeList = []
@@ -48,11 +48,19 @@ def CheckIfInFilePath(startPath,FileNameCheck, itemToCheck, savePath,MbLowLimit=
                     # print(fileNameOnly)
                     if FileNameCheck:
                         # if fileNameOnly == 'python.exe':
-                        if fileNameOnly == itemToCheck:
-                            FileNameLocationFound.append(fp)
+                        # print('fileNameOnly',fileNameOnly)
+                        if ExtensionOnly:
+                            ThisFileExtension = '.'+fileNameOnly.split('.')[-1]
+                            # print(ThisFileExtension)
+                            # print(CheckExtension)
+                            if ThisFileExtension.lower() == CheckExtension.lower():
+                                FileNameLocationFound.append(fp)
+                        else:
+                            if fileNameOnly.lower() == itemToCheck.lower():
+                                FileNameLocationFound.append(fp)
                     
                     else:
-                        if fileNameOnly[0] == itemToCheck:
+                        if fileNameOnly[0].lower() == itemToCheck.lower():
                             FileNameLocationFound.append(fp)
                         
 
@@ -70,6 +78,8 @@ def CheckIfInFilePath(startPath,FileNameCheck, itemToCheck, savePath,MbLowLimit=
     print('FileNameLocationFound: ')
 
     pprint.pprint(FileNameLocationFound)
+
+    pprint.pprint(len(FileNameLocationFound))
     # df = pandas.DataFrame(columns = []) 
 
     # df['File Directory'] = dirPathList
@@ -146,19 +156,23 @@ def CheckIfInFilePath(startPath,FileNameCheck, itemToCheck, savePath,MbLowLimit=
 
 # startPath = r'C:\Program Files\LibreOffice'
 
-startPath = r'C:\ProgramData\Anaconda3'
+# startPath = r'C:\ProgramData\Anaconda3'
 
 savePath = r'C:\Users\IgorDC\Desktop\FileSizes\PandasFilesizeDriveC.csv'
 
+startPath = r'C:\Program Files\Microsoft Office\root\Office16'
+
 MbLowLimit = 5
 
-CheckExtension = '.Exe'
+CheckExtension = '.exe'
 
 First = 1
 
 Second = 2
 
 FileNameCheck = True
+
+ExtensionOnly = True
 
 itemToCheck = 'difflib.py'
 
@@ -171,5 +185,5 @@ FileNameLongHigherInterVal=-2
 # getDirSize(startPath,savePath,MbLowLimit)
 
 # print(get_size(start_path))
-CheckIfInFilePath(startPath,FileNameCheck, itemToCheck, savePath, FileNameLongLowerInterVal, FileNameLongHigherInterVal)
+CheckIfInFilePath(startPath,FileNameCheck, itemToCheck, ExtensionOnly, savePath,MbLowLimit,CheckExtension, First,Second,FileNameLongLowerInterVal, FileNameLongHigherInterVal)
 # getDirSize(startPath=startPath,savePath=savePath,MbLowLimit=MbLowLimit,First=First,Second=Second)
