@@ -9,18 +9,23 @@ import pprint
 
 
 
-def getWordTableLimits(Location = '', FileName = '',document=''):
+def getWordTableLimitsOneList(Location = '', FileName = '',document=''):
     
     goOn = False
 
     if document == '':
         wordDocument = Location +'\\' +FileName
-        if wordDocument == '\\':
+       
+        if FileName == '':
             print('add data')
             pass
-        elif FileName == '':
-            print('add data')
-            pass
+        elif Location =='':
+            if FileName == '':
+                print('addData')
+            else: 
+                wordDocument = FileName
+                document = Document(wordDocument)
+                goOn=True
         else:
             document = Document(wordDocument)
             goOn=True
@@ -95,7 +100,19 @@ def getWordTableLimits(Location = '', FileName = '',document=''):
             else:   
                 TableLocations.append(TableRowLocations)
 
-        return TableLocations   
+        
+        SingleListTableLocations = []
+        for itemX in TableLocations:
+            for itemY in itemX:
+                for item in itemY:
+                    SingleListTableLocations.append(item)
+                    
+        
+        return SingleListTableLocations
+        
+        
+        # return TableLocations   
+
 
 
 
@@ -104,12 +121,14 @@ def getWordTableLimits(Location = '', FileName = '',document=''):
 
 #test bellow
 
-Location = r'C:\Users\IgorDC\Desktop\PydocTest'
+# Location = r'C:\Users\IgorDC\Desktop\PydocTest'
 
-FileName = 'TestDocNoChangeAllBoldArialBlack.docx'
-
-
-TableLocations = getWordTableLimits(Location=Location, FileName=FileName)
+# FileName = 'TestDocNoChangeAllBoldArialBlack.docx'
 
 
-pprint.pprint(TableLocations)
+# TableLocations = getWordTableLimitsOneList(Location=Location, FileName=FileName)
+
+
+# pprint.pprint(TableLocations)
+
+
