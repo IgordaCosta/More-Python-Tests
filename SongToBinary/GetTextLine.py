@@ -13,7 +13,11 @@ print(millis)
 
 # fileUsed = 'CodesWritten3sVideo25Digit.txt'
 
-fileUsed = 'CodesWritten3sVideo25Digit256bits36choices.txt'
+
+
+# fileUsed = 'CodesWritten3sVideo25Digit256bits36choices.txt'
+
+fileUsed = 'CodesWritten3sVideo55Digit.txt'
 
 
 file1 = open(fileUsed,"r") 

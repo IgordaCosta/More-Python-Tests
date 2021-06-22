@@ -7,6 +7,12 @@ import pprint
 
 import DecimalToBinaryList
 
+
+
+
+
+
+
 millis = int(round(time.time() * 1000))
 
 print(millis)
@@ -17,7 +23,7 @@ SongName='video3Sec.mp4'
 
 
 # this is the number of itens in a list
-numberOfItens=25
+numberOfItens=55
 
 # 
 # numberOfItens=40     
