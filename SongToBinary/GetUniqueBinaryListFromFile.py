@@ -7,7 +7,19 @@ import pprint
 
 import DecimalToBinaryList
 
-
+#TODO add more possible variables like uppercase and symbols to 'valueUsedFor36Itens'
+#     for the way it is 'passwords' are weaker
+#     add a different option for such and activate it by default
+#     after adding this values scramble them manually then after by ramdom function
+#     this can be done first by only providing all the caracters (not in list format) 
+#     one after the other and in MS word and selecting, dragging, then droping
+#     cetain areas of the word into a different location of the word (string of characters) 
+#     then providing that word into a fuction that will randomise the order of characters
+#     after that it will feed this string into a function that will turn this string of characters
+#     into a list of characters
+#     this list of characters will be used as the possible characters for this password
+#     that will be generated
+#     this will then be saved into a different .7z folder file
 
 def GetUniqueBinaryListFromFile(numberOfItens,InputFileLocation,OutputFileTxtLocation):
 

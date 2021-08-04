@@ -1,3 +1,5 @@
+import os
+
 import GetUniqueBinaryListFromFile
 
 
@@ -22,6 +24,8 @@ GetUniqueBinaryListFromFile.GetUniqueBinaryListFromFile(numberOfItens,InputFileL
 GetUniqueBinaryListFromFile.getUniqueValuesFromList(fileTxtInput)
 
 GetUniqueBinaryListFromFile.GetEspecificLineTxt(LineToGet, OutputFileTxtLocation)
+
+os.remove(OutputFileTxtLocation) 
 
 print('Done!')
 
