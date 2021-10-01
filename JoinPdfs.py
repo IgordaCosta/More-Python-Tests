@@ -9,12 +9,12 @@ import os, PyPDF2
 
 
 
-def JoinPdfs(Folderlocation,nameOfNewFile,desiredFileType):
+def JoinPdfs(Folderlocation,nameOfNewFile,desiredFileType,splitSymbol="_"):
 
     pdf2merge =[]
     for filename in os.listdir(Folderlocation):
         if filename.endswith(".pdf"):
-            if (filename.split("_")[0]==desiredFileType):
+            if (filename.split(splitSymbol)[0]==desiredFileType):
                 pdf2merge.append(filename)
 
     print(pdf2merge)
@@ -53,12 +53,24 @@ def JoinPdfs(Folderlocation,nameOfNewFile,desiredFileType):
 
 # Folderlocation="C:\\Users\\IgorDC\\Documents\\AutoFormFillerFiles\\"
 
+
+
+Folderlocation="C:\\Users\\IgorDC\\Documents\\PdfsToJoin\\"
+
+
+
 # nameOfNewFile="NewFileJoined"
 # desiredFileType="testFile"
 
 
+nameOfNewFile="comprovantesResistenciaIgor"
+desiredFileType='comprovanteResistencia'
 
-# JoinPdfs(Folderlocation=Folderlocation,nameOfNewFile=nameOfNewFile,desiredFileType=desiredFileType)
+splitSymbol='('
+
+
+
+JoinPdfs(Folderlocation=Folderlocation,nameOfNewFile=nameOfNewFile,desiredFileType=desiredFileType,splitSymbol=splitSymbol)
 
 
 
