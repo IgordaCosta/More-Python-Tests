@@ -1,20 +1,34 @@
 from PIL import Image
 
 
-def jpgToPdf(Folderlocation, ImageName,PdfSaveName):
+def jpgToPdf(ImageName,Folderlocation ='', PdfSaveName='', ReturnLocation = False):
 
     image1 = Image.open(Folderlocation + ImageName)
     im1 = image1.convert('RGB')
-    im1.save(Folderlocation + PdfSaveName)
+
+    if PdfSaveName == '':
+
+        PdfSaveName = '.'.join(ImageName.split('.')[:-1]) + '.pdf'
+
+    SaveLocation = Folderlocation + PdfSaveName
+    
+    im1.save(SaveLocation)
+
+    if ReturnLocation:
+        
+        return SaveLocation
 
 
 
-Folderlocation="C:\\Users\\IgorDC\\Documents\\PdfsToJoin\\"
+# Folderlocation="C:\\Users\\IgorDC\\Documents\\PdfsToJoin\\"
 
-ImageName = 'comprovanteResistencia2.jpg'
+# ImageName = 'comprovanteResistencia2.jpg'
 
-PdfSaveName = 'comprovanteResistencia2.pdf'
+# PdfSaveName = 'comprovanteResistencia2.pdf'
 
 
 
-jpgToPdf(Folderlocation, ImageName,PdfSaveName)
+# jpgToPdf(Folderlocation, ImageName,PdfSaveName)
+
+
+

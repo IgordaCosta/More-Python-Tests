@@ -1,6 +1,8 @@
 import sqlite3
 import os
 
+import pprint
+
 import changeDirectory
 
 import dropSqlTable
@@ -184,11 +186,54 @@ def MultipleDictionaryWriteDataDatabase(DictionaryAdd,Database="AutoFormFiller.d
 
 
 
-# # getTables()
+
+
+pp = pprint.PrettyPrinter(indent=4)
+
+
+
+# getTables()
 
 # getTables(Database="AutoFormFiller.db",willChangeDirectory=True)
 
-# # GetTableDataFromTable(Database="AutoFormFiller.db",TableName='KEY_file1',TableNumber='')
+# pp.pprint(GetTableDataFromTable(Database="AutoFormFiller.db",TableName='qqqqqqqrrrrrrSetValuesrrrrrrqqqqqqq',TableNumber='',ErrorIfNotFound=True, willChangeDirectory=True))
+
+# pp.pprint(GetTableDataFromTable(Database="AutoFormFiller.db",TableName='FilesInDatabase',TableNumber=''))
+# pp.pprint(GetTableDataFromTable(Database="AutoFormFiller.db",TableName='FontAndItsSize',TableNumber=''))
+
+
+# pp.pprint(GetTableDataFromTable(Database="AutoFormFiller.db",TableName='KEY_ImgH1',TableNumber=''))
+
+# output1 = GetTableDataFromTable(Database="AutoFormFiller.db",TableName='KEY_ImgI1',TableNumber='')
+
+# pp.pprint(output1)
+# print(type(output1))
+
+# print(output1[0])
+
+# print(type(output1[0]))
+
+# print(output1[0][0])
+
+# print(type(output1[0][0]))
+
+
+
+
+# print(output1[1])
+
+# print(type(output1[1]))
+
+# print(output1[1][0])
+
+# print(type(output1[1][0]))
+
+# print(output1[1][1])
+
+# print(type(output1[1][1]))
+
+# dataName = 'fileLocation'
+# pp.pprint(GetDataFromDatabase(dataName, TableName='qqqqqqqrrrrrrSetValuesrrrrrrqqqqqqq'))
 
 # # data=50
 # # dataName="firstData"
@@ -196,16 +241,23 @@ def MultipleDictionaryWriteDataDatabase(DictionaryAdd,Database="AutoFormFiller.d
 # # WriteDataDatabase(data,dataName)
 
 # dictValue=GetTableData(Database="AutoFormFiller.db",TableName='FontAndItsSize',ErrorIfNotFound=True,willChangeDirectory=True)
-import pprint
 
-dictValue=GetTableData(Database="AutoFormFiller.db",ErrorIfNotFound=True,willChangeDirectory=True)
+
+
+
+# import pprint
+
+# dictValue=GetTableData(Database="AutoFormFiller.db",ErrorIfNotFound=True,willChangeDirectory=True)
+
+
+
 
 # pp = pprint.PrettyPrinter(indent=4)
 # pp.pprint(dictValue)
 
 # print('LocationToAddFileOnApp :',str(dictValue['LocationToAddFileOnApp']))
 
-pprint.pprint(dictValue)
+# pprint.pprint(dictValue)
 
 
 # print(dictValue["File Saved Location"])

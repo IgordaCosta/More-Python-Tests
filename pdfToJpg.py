@@ -10,7 +10,7 @@ from pdf2image import convert_from_path
 
 
 
-def pdfToJpg(FolderLocation,PdfFileName,OutputFilename):
+def pdfToJpg(PdfFileName,OutputFilename, FolderLocation='', diferetiate=True):
 
 
     
@@ -43,12 +43,21 @@ def pdfToJpg(FolderLocation,PdfFileName,OutputFilename):
 
         page.save(pagefilename, 'JPEG')
         
-        filenames.append(newFileName)
+        if diferetiate:
+            filenames.append(newFileName)
+
+        else:
+            filenames.append(pagefilename)
         
 
     print("Done")
-    if i==1:
-        return newFileName
+
+    if diferetiate:
+        if i==1:
+            return newFileName
+        else:
+            return filenames
+
     else:
         return filenames
 
@@ -57,12 +66,18 @@ def pdfToJpg(FolderLocation,PdfFileName,OutputFilename):
 
 
 
-# FolderLocation="C:\\Users\\IgorDC\\Desktop\\"
+# # FolderLocation="C:\\Users\\IgorDC\\Desktop\\"
 
-# PdfFileName="WeddingContract.pdf"
+# FolderLocation =r'C:\Users\Tigereye\Desktop' + '\\'
 
-# OutputFilename='WeddingContract'
+# # PdfFileName="WeddingContract.pdf"
 
+# # OutputFilename='WeddingContract'
+
+
+
+# PdfFileName="dadosMulta.facesIsabela.pdf"
+# OutputFilename='dadosMultaFacesIsabela'
 
 
 
