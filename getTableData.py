@@ -192,7 +192,7 @@ pp = pprint.PrettyPrinter(indent=4)
 
 
 
-# getTables()
+getTables()
 
 # getTables(Database="AutoFormFiller.db",willChangeDirectory=True)
 

@@ -1,5 +1,7 @@
 from pysqlitecipher import sqlitewrapper
 
+import os
+
 
 
 
@@ -385,4 +387,4 @@ def DeleteDb():
 # WriteTableSecuredIten(ItemName,ItenValue)
 
 
-# print(GetAllTableSecuredData())
+print(GetAllTableSecuredData())
