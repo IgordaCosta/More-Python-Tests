@@ -9,10 +9,10 @@ from moviepy.editor import *
 
 
 
-Mp4File ='Reuniao2Ap.mp4'
+Mp4File ='File2Convert.mp4'
 
 
-pathUsed = 'C:\\Users\\IgorDC\\Desktop\\Mp4ToMp3Location\\'
+pathUsed = r'C:\Users\Tigereye\Desktop\Mp4ToMp3Location'+ '\\'
 
 
 
