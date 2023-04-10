@@ -1,0 +1,66 @@
+import os
+
+# Prompt user for the txt file containing the lines to search for
+line_list_path = r'C:\Users\Tigereye\Desktop\HTMLfiles\JSFunctionfiles' + '\\'+ 'JsFunctionFilesInApp.txt'
+
+# Prompt user for the folder containing the files to search
+search_folder = r'C:\Users\Tigereye\Desktop\HTMLfiles\SavedJsFilesFromJS' + '\\'
+
+# Prompt user for the output txt file name
+
+outputFolder = r'C:\Users\Tigereye\Desktop\HTMLfiles\JSFunctionfilesOutput' + '\\'
+
+output_file_name = outputFolder + 'JsFunctionFilesInAppOutput.txt'
+
+# Create a dictionary to store the results
+results_dict = {}
+
+# Open the txt file containing the lines to search for
+with open(line_list_path, 'r') as line_list:
+    # Loop through each line in the txt file
+    for line in line_list:
+        # Strip whitespace and newlines from line
+        line = line.strip()
+
+        if not os.path.exists(outputFolder):
+            os.makedirs(outputFolder)
+        
+        # Loop through each file in the search folder
+        for root, dirs, files in os.walk(search_folder):
+            for filename in files:
+                # Create absolute path to file
+                file_path = os.path.join(root, filename)
+
+                # Open file and loop through each line
+                with open(file_path, 'r') as f:
+                    for i, file_line in enumerate(f):
+                        # Strip whitespace and newlines from file_line
+                        file_line = file_line.strip()
+                        
+                        # Check if line is in file_line
+                        if line in file_line:
+                            # line.replace("\\", "//")
+                            if r"//" in line:
+                                pass
+                            else:
+                                if file_line == '':
+                                    pass
+                                else:
+                                    # Create the key if it doesn't exist yet
+                                    if filename not in results_dict:
+                                        results_dict[filename] = []
+
+                                    # Add the line location to the results dictionary
+                                    line_location = f"{i+1}:{file_line}"
+                                    results_dict[filename].append(line_location)
+
+# Write the results to the output txt file
+with open(output_file_name, 'w') as output_file:
+    for filename, line_locations in results_dict.items():
+        # output_file.write(f"{filename},")
+        for lineNumber in range(len(line_locations)):
+            output_file.write(filename + ',' + line_locations[lineNumber])
+            output_file.write('\n')
+
+# Print success message
+print(f"Results saved to '{output_file_name}'.")
