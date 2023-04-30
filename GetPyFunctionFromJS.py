@@ -4,7 +4,7 @@ import re
 
 def extract_css_js_files(folder_path):
 
-    js_folder_path = os.path.join(folder_path, 'JSFunctionfiles')
+    js_folder_path = os.path.join(folder_path, 'PyFunctionFilesInJsFile')
 
 
     if not os.path.exists(js_folder_path):
@@ -24,20 +24,12 @@ def extract_css_js_files(folder_path):
 
                     for content in contents:
                         
-                        if 'require(' in content:
+                        if '.py' in content:
                             if r'//' in content:
                                 pass
                             else:
-                                content2 = content.replace(" ", "").replace('"', "'").replace(";","").replace("'",'').replace("(",'').replace(')', '').split("require")[1] + '.js'
-
-
-                                content2Check = len(content2.split(r'./js/'))
-                                if content2Check == 1:
-                                    content3 = content2
-                                else:
-                                    content3 = content2.split(r'./js/')[1]
-
-                                js_files.append(content3.replace('\n',''))
+                                content2 = content.replace(" ", "").replace(";","").replace('"', "'").replace("'",'').split("=")[1]
+                                js_files.append(content2.replace('\n',''))
                 
 
 
@@ -48,7 +40,7 @@ def extract_css_js_files(folder_path):
     js_files1.sort()
 
             
-    with open(js_folder_path + '\\' + 'JsFunctionFilesInApp.txt', "w") as file:
+    with open(js_folder_path + '\\' + 'PyFunctionFilesInJsFile.txt', "w") as file:
         for item in js_files1:
             file.write(item + '\n')
         file.close()
