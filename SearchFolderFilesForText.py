@@ -33,7 +33,7 @@ def search_files(folder_path, search_word, output_file_path, fileending):
     print("Excel file created successfully!")
 
 folder_path = r'C:\Users\Tigereye\Desktop\ImportPythonSaveLocations\inputFiles'
-search_word = "fonttools"
+search_word = "CreateCloseExcel"
 output_file_path = r"C:\Users\Tigereye\Desktop\ImportPythonSaveLocations" + "\\" + search_word + "_outputWordSearch.xlsx"
 fileending = ".py"
 search_files(folder_path, search_word, output_file_path, fileending)

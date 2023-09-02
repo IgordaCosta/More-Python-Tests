@@ -1,0 +1,7 @@
+stringList = 'clickedAddFile.py DeleteFromDataFillName.py placeValuesInFile.py RemoveCharacters.py RunDeleteObjFromTableFL.py AddToable.py AddToDatabase.py CallgetDbData.py CallgetDbData.py CheckJobNameRedo.py CloseWorkbook.py copyImageToAppFolder.py DeleteFromDataFillName.py filenameCheckIfLocationWordinDoc.py filenameCreateImageWithMarker.py filenameGetItemAddressAndDescription.py filenameGetOldStamp.py filenameGetOldStamp.py filenameOpenExcelDocument.py filenameOpenWordDocument.py filenameCheckJobNameRedo.py filenameCheckJobNameRedo.py filenameCheckJobNameRedo.py filenameCloseWorkbook.py filenameGetAllFontNamesFromFolder.py filenameGetTitleAndDataForSingleRowTable.py filenameOPFSelectImageFileTitleAndData.py filenamePutListDataIntoImageWithFontSizeStep5.py filenamePutListDataIntoImageWithFontSizeStep5.py filenameRunDeleteAllTempFilesFromApp.py filenameSortFilesIntoFolders.py FindMyDocumentsDatabasePath.py FindMyDocumentsDatabasePath.py GetDbData.py getFinalLocationItens.py GetLocationName.py getRealdatafillName.py getTextfromTxli.py IfFirstRun.py insertIntoDatabase.py JoinImagesIntoPdfParallel.py JoinImagesIntoPdfSingle.py JoinPdfWGetDatas.py LMFAddInfoExcel.py LoadToMultipleFilesDetails.py LoadToMultipleFilesDetails.py LoadToMultipleFilesDetails.py OpenFolderLocation.py PlaceAboutImage.py PutListDataIntoImage.py PutListDataIntoImageWithFontSize.py PutListDataIntoImageWithFontSize.py RemoveLastAndTryAgain.py ReturnFromSameFileInside.py WordOrExcelToPdf.py'.split(' ')
+
+# print(stringList)
+
+setList = set(stringList)
+
+print(len(setList))
