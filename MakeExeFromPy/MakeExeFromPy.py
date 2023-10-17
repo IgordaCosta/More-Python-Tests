@@ -21,6 +21,6 @@ LocationPy= r'E:\Apps\CSSAutoFormFiller7_Updated93\CSSAutoFormFiller\_engine' + 
 
 # python_scripts= 'AddToable.py AddToable.py AddToDatabase.py CallgetDbData.py CheckJobNameRedo.py clickedAddFile.py clickedAddFile.py CloseWorkbook.py copyImageToAppFolder.py DeleteFromDataFillName.py FindMyDocumentsDatabasePath.py GetDbData.py getFinalLocationItens.py GetLocationName.py getRealdatafillName.py getTextfromTxli.py IfFirstRun.py insertIntoDatabase.py JoinImagesIntoPdfParallel.py JoinImagesIntoPdfSingle.py JoinPdfWGetDatas.py LMFAddInfoExcel.py IfFirstRun.py insertIntoDatabase.py JoinImagesIntoPdfParallel.py JoinImagesIntoPdfSingle.py JoinPdfWGetDatas.py LMFAddInfoExcel.py LoadToMultipleFilesDetails.py OpenFolderLocation.py PlaceAboutImage.py placeValuesInFile.py placeValuesInFile.py PutListDataIntoImage.py PutListDataIntoImageWithFontSize.py RemoveCharacters.py RemoveLastAndTryAgain.py ReturnFromSameFileInside.py RunDeleteObjFromTableFL.py WordOrExcelToPdf.py'.split(' ')
 
-python_scripts= ['CreateImageWithMarker.py']
+python_scripts= ['copyImageToAppFolder.py','CreateImageWithMarker.py']
 
 compile_python_scripts_to_exe_files(LocationPy, python_scripts)
