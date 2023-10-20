@@ -36,7 +36,8 @@ def SearchFolderFIleNames(TextToCheck, pathToCheck, CamelCaseIntoSentence =False
 
 
 
-TextToCheck = 'AddDataCheckIfExists.js '
+# TextToCheck = 'AddDataCheckIfExists.js '
+TextToCheck = 'GetDbData.py '
 
 
 # CamelCaseIntoSentence =False

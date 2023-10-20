@@ -29,7 +29,7 @@ def create_executables(src_folder, output_folder, spec_folder, error_log_file):
             # Create the command to run PyInstaller
             spec_file = os.path.join(spec_folder, output_name + '.spec')
             command = [
-                'pyinstaller',
+                '',
                 
                 src_file          # The source Python file
             ]
@@ -44,8 +44,8 @@ def create_executables(src_folder, output_folder, spec_folder, error_log_file):
             else:
                 print(f'Successfully created executable for {file} ({itemNumber}/{python_filesSize})')
 
-source_folder = r'C:\Users\Tigereye\Desktop\PythonFilesIntoExes\PythonFilesSelected' + '\\'
-output_folder = r'C:\Users\Tigereye\Desktop\PythonFilesIntoExes\ExesFileSelected' + '\\'
+source_folder = r' ' + '\\'
+output_folder = r' ' + '\\'
 spec_folder = r'C:\Users\Tigereye\Desktop\PythonFilesIntoExes\SpecFiles' + '\\'
 error_log_file = r'C:\Users\Tigereye\Desktop\PythonFilesIntoExes' + '\\' + 'error_log.csv'
 
