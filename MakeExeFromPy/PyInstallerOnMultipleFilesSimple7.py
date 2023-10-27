@@ -45,9 +45,9 @@ for filename in files_to_convert:
         
 
         # Use pyinstaller to convert the Python file to an executable
-        subprocess.call(["pyinstaller", source_file_path])
+        subprocess.call(["pyinstaller", source_file_path, "--distpath", target_dir, "--noconfirm", "--onefile"])
 
-        print(str(numberOn)+'/'+str(numberOfFiles))
+        print(str(numberOn)+'/'+str(numberOfFiles)+' ++++++++++++++++++++++++++++++++++++++++++++++++++++++')
 
 #         # Move the generated executable to the target directory
 #         shutil.move(os.path.join(source_dir, "dist", target_file), target_file_path)
@@ -57,4 +57,4 @@ for filename in files_to_convert:
 #         shutil.rmtree(os.path.join(source_dir, "dist"))
 #         os.remove(os.path.join(source_file_path + ".spec"))
 
-# print("Conversion to executable files is complete.")
+print("Conversion to executable files is complete.")
