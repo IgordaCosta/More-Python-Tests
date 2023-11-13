@@ -1,0 +1,1068 @@
+{
+  "AddToable.py": [
+    "sys",
+    "getTableData"
+  ],
+  "AddToDatabase.py": [
+    "PyPDF2",
+    "os.path.isfile",
+    "importedDataPyupdateNamesFile",
+    "getTableData",
+    "base93Characterconversion",
+    "importedDataPyimageFolderLocation.*",
+    "importedDataPyexcelLocation.*",
+    "pdfToJpg",
+    "changeDirectory",
+    "ListToSentence",
+    "PrintTexListSerial",
+    "importedDataPyFilesInDatabaseLocation",
+    "os",
+    "os.listdir",
+    "importedDataPyinternalLocation.*"
+  ],
+  "base93Characterconversion.py": [
+    "string",
+    "time",
+    "random"
+  ],
+  "CallgetDbData.py": [
+    "PrintTexListSerial",
+    "sys",
+    "StringToOrdList",
+    "getTableData"
+  ],
+  "changeDirectory.py": [
+    "os",
+    "importedDataPyinternalLocation.*"
+  ],
+  "ChangeFileExtension.py": [
+    "os"
+  ],
+  "ChangeStartupDirectoryT.py": [
+    "os",
+    "importedDataPyinternalLocation.*"
+  ],
+  "CharatersInString.py": [],
+  "CheckAllFilled.py": [
+    "pandas"
+  ],
+  "checkAndFixExcelImageDifference.py": [
+    "pathlib",
+    "shiftImage",
+    "CheckDifferenceInExcelImage"
+  ],
+  "CheckChangeInSizeAndMovement.py": [
+    "RunImportImageMacro",
+    "excelToJpg",
+    "CreateBlackCross"
+  ],
+  "CheckDifferenceInExcelImage.py": [
+    "excelToJpg",
+    "ComparingImages"
+  ],
+  "CheckDifferenceInXYImageChange.py": [
+    "CheckChangeInSizeAndMovement",
+    "pathlib",
+    "ComparingImages"
+  ],
+  "checkIfDocumentSaved.py": null,
+  "checkIfDoubleList.py": [],
+  "CheckIfFileChanged.py": [
+    "os",
+    "PrintTexListSerial",
+    "getTableData"
+  ],
+  "checkIfFileExistsInLocation.py": [
+    "FixExcelExtension",
+    "os.path",
+    "getTableData"
+  ],
+  "CheckIfLocationWordinDoc.py": [],
+  "CheckIfParagraphDataSame.py": null,
+  "CheckIfPixelColorIsBlack.py": [
+    "PIL.Image"
+  ],
+  "checkIfThereAreOtherChanges.py": [
+    "os",
+    "CheckIfParagraphDataSame",
+    "getTableData"
+  ],
+  "checkIfValueInText.py": [
+    "bs4.BeautifulSoup",
+    "docx.Document"
+  ],
+  "CheckImageApearanceBySize.py": [
+    "ExcelToPdf",
+    "resizeImage",
+    "RunImportImageMacro",
+    "excelToJpg",
+    "pathlib",
+    "imageSizeByMultiplicationValue"
+  ],
+  "CheckImageSize.py": [
+    "resizeImage",
+    "RunImportImageMacro",
+    "excelToJpg",
+    "CheckIfPixelColorIsBlack",
+    "imageSizeByMultiplicationValue",
+    "placeImageOnTopAnother"
+  ],
+  "CheckImageXYSize.py": [
+    "cv2"
+  ],
+  "CheckJobNameRedo.py": [
+    "getTableData",
+    "readSqlDatabase",
+    "CleanUpSencence",
+    "PrintTexListSerial",
+    "createSqliteTableFromList",
+    "re"
+  ],
+  "checklifdfcanberetrieved.py": [
+    "readSqlDatabase"
+  ],
+  "CheckLocationDataExcel.py": [
+    "pandas",
+    "numpy"
+  ],
+  "CheckXYImageChange.py": [
+    "CheckChangeInSizeAndMovement",
+    "PIL.Image"
+  ],
+  "ChoosenImageContinue.py": [
+    "copyImageToAppFolderFromPython",
+    "MakeSureCopied",
+    "getTableData"
+  ],
+  "cleanUpFolderFiles.py": [
+    "os"
+  ],
+  "CleanUpSencence.py": [
+    "re"
+  ],
+  "clickedAddFile.py": [
+    "CreateRow",
+    "pandas",
+    "DeleteAllFilesInFolder",
+    "datetime",
+    "MakeSureCopied",
+    "getTableData",
+    "pathlib.Path",
+    "readSqlDatabase",
+    "writeToSqlite",
+    "StringListIntoList",
+    "os",
+    "CloseEspecificWorkbook"
+  ],
+  "CloseEspecificWorkbook.py": [
+    "ForceCloseExcelFunction",
+    "psutil",
+    "os",
+    "time",
+    "win32com.client"
+  ],
+  "CloseExcelFile.py": [],
+  "closeWordWithHelp.py": [
+    "win32com.client",
+    "PrintTexListSerial"
+  ],
+  "CloseWorkbook.py": [
+    "win32com.client",
+    "ForceCloseExcel"
+  ],
+  "CloseWorkbookBACKUP.py": [
+    "win32com.client",
+    "ForceCloseExcel"
+  ],
+  "CompareTwoImages.py": [
+    "CheckXYImageChange",
+    "pathlib"
+  ],
+  "ComparingImages.py": [
+    "CheckXYImageChange",
+    "resizeImage"
+  ],
+  "ContinueToRest.py": [
+    "PIL.ImageDraw",
+    "GetAllFontNamesFromFolderFunction",
+    "GetFontFilePaths",
+    "datetime",
+    "getUniqueAddFileEndWithFIlename",
+    "getTableData",
+    "PIL.ImageFont",
+    "generateTxtFile",
+    "PrintTexListSerial",
+    "PIL.Image",
+    "os",
+    "time",
+    "importedDataPyAutoFormFiller_OutputFiles.*",
+    "importedDataPyinternalLocation.*",
+    "CopyFileToNewLocation"
+  ],
+  "copyBlankToTempFolder.py": [
+    "copyToTempFolderFunction"
+  ],
+  "copyFile.py": [
+    "shutil",
+    "MakeSureCopied"
+  ],
+  "CopyFileAnContinue.py": [
+    "ContinueToRest",
+    "CopyFileToNewLocation"
+  ],
+  "CopyFileListIntoLocation.py": [
+    "MakeSureCopied"
+  ],
+  "copyFileToAutoFormFillerFiles .py": [
+    "MakeSureCopied",
+    "getTableData"
+  ],
+  "CopyFileToNewLocation.py": [
+    "os",
+    "MakeSureCopied"
+  ],
+  "copyImageToAppFolder.py": [
+    "copyImageToAppFolderFromPython"
+  ],
+  "copyImageToAppFolderFromPython.py": [
+    "DeleteAllFilesInFolder",
+    "MakeSureCopied",
+    "getTableData",
+    "base93Characterconversion",
+    "os"
+  ],
+  "copyImageToAppFolderSwitchEndingOnly.py": [
+    "copyImageToAppFolderFromPython"
+  ],
+  "copyToTempFolder.py": [
+    "copyToTempFolderFunction"
+  ],
+  "copyToTempFolderFunction.py": [
+    "DeleteAllFilesInFolder",
+    "MakeSureCopied",
+    "getTableData",
+    "base93Characterconversion",
+    "importedDataPyimageFolderLocation.*",
+    "FilePathFromPython"
+  ],
+  "CreateBlackCross.py": [
+    "pathlib",
+    "PIL.Image"
+  ],
+  "CreateCloseExcel.py": [
+    "pandas",
+    "openpyxl",
+    "openpyxl.styles.Alignment",
+    "psutil",
+    "os",
+    "time",
+    "win32com.client",
+    "random"
+  ],
+  "createDataframeKeyEntry.py": [
+    "writeToSqlite",
+    "pandas"
+  ],
+  "CreateFolderInFolder.py": [
+    "os"
+  ],
+  "CreateImageWithMarker.py": [
+    "PIL.ImageDraw",
+    "getFinalLocationItens",
+    "resizeImage",
+    "getTableData",
+    "copyImageToAppFolderFromPython",
+    "PIL.ImageFont",
+    "PIL.Image",
+    "MultiplyTextSizeByImageHeight",
+    "os",
+    "pathlib"
+  ],
+  "CreateRow.py": [
+    "pandas"
+  ],
+  "CreateSavedLoation.py": [],
+  "createSqliteTableFromList.py": [
+    "RegularExpressionTextOrList",
+    "GetKeyfileNameType",
+    "GetWriteDBTableSecured",
+    "sqlite3",
+    "changeDirectory"
+  ],
+  "CreateTempSaveLoationName.py": [
+    "base93Characterconversion"
+  ],
+  "decodeQRCodeIntoExcelFile.py": [
+    "cv2",
+    "pathlib"
+  ],
+  "DeleteAllFilesInFolder.py": [
+    "os",
+    "CreateFolderInFolder"
+  ],
+  "DeleteAllTempFiles.py": [
+    "DeleteAllFilesInFolder",
+    "importedDataPyimageFolderLocation.*",
+    "importedDataPyFAutoForm_FillerFiles.*",
+    "FilePathFromPython",
+    "CreateFolderInFolder",
+    "importedDataPyAutoFormFillerKey.*",
+    "os",
+    "importedDataPyinternalLocation.*"
+  ],
+  "DeleteExcelTempFiles.py": [
+    "changeDirectory",
+    "os",
+    "pandas"
+  ],
+  "DeleteFromDataFillName.py": [
+    "dropSqlTable",
+    "pandas",
+    "datetime",
+    "MakeSureCopied",
+    "getTableData",
+    "pathlib.Path",
+    "readSqlDatabase",
+    "writeToSqlite",
+    "os"
+  ],
+  "DeleteObjFromTable.py": [
+    "dropSqlTable",
+    "getTableData"
+  ],
+  "dropSqlTable.py": [
+    "DeleteAllFilesInFolder",
+    "GetKeyfileNameType",
+    "GetWriteDBTableSecured",
+    "sqlite3",
+    "changeDirectory",
+    "os"
+  ],
+  "EncodeDecode4Db.py": [
+    "StringToOrdList"
+  ],
+  "endingFileDiferentiator.py": [
+    "string",
+    "time",
+    "random"
+  ],
+  "excelToJpg.py": null,
+  "ExcelToPdf.py": [
+    "sys",
+    "shutil",
+    "re",
+    "os",
+    "win32com.client"
+  ],
+  "FileExistInDatabaseFunction.py": [
+    "CheckAllFilled",
+    "pandas",
+    "getTableData",
+    "ListToSentence",
+    "getLocationValues",
+    "PrintTexListSerial",
+    "valueInFrame",
+    "os",
+    "CloseEspecificWorkbook"
+  ],
+  "FilePathFromPython.py": [
+    "pathlib"
+  ],
+  "FilterTxtFileIntoList.py": [
+    "pandas",
+    "os.walk"
+  ],
+  "FilterTxtFileIntoList2.py": [
+    "pandas",
+    "os.walk"
+  ],
+  "FindMyDocumentsDatabasePath.py": [
+    "os",
+    "PrintTexListSerial",
+    "importedDataPyinternalLocation.*"
+  ],
+  "FixExcelExtension.py": [],
+  "ForceCloseExcel.py": [
+    "ForceCloseExcelFunction"
+  ],
+  "ForceCloseExcelFunction.py": [
+    "os"
+  ],
+  "ForceCloseSpecificExcelFile.py": [
+    "os"
+  ],
+  "ForceCloseSpecificPaintFile.py": [
+    "os"
+  ],
+  "frameStyleByColor.py": [
+    "styleframe.StyleFrame"
+  ],
+  "GBTdat.py": [
+    "base93Characterconversion",
+    "os",
+    "yfinance",
+    "json"
+  ],
+  "generateQRfromText.py": [
+    "qrcode"
+  ],
+  "generateTxtFile.py": [
+    "ChangeFileExtension"
+  ],
+  "getAddressesFromColumn.py": [
+    "re"
+  ],
+  "GetAllFontNamesFromFolder.py": [
+    "GetAllFontNamesFromFolderFunction",
+    "PrintTexListSerial"
+  ],
+  "GetAllFontNamesFromFolderFunction.py": [
+    "os",
+    "pathlib",
+    "GetFontName"
+  ],
+  "getAllmportedLibraries.py": [
+    "pandas",
+    "os.walk"
+  ],
+  "getAllPrintLocations.py": [
+    "FilterTxtFileIntoList",
+    "pandas",
+    "os.walk"
+  ],
+  "getAllPrintLocationsUpdated.py": [
+    "pandas",
+    "os.walk"
+  ],
+  "getAllPrintLocationsUpdated2.py": [
+    "pandas",
+    "os.walk"
+  ],
+  "GetDbData.py": [
+    "GetDbDataFunction",
+    "DeleteAllTempFiles"
+  ],
+  "GetDbDataFunction.py": [
+    "pandas",
+    "readSqlDatabase",
+    "ChangeStartupDirectoryT",
+    "PrintTexListSerial",
+    "StringListIntoList"
+  ],
+  "GetExcelFilesinLocation.py": [
+    "os",
+    "glob",
+    "importedDataPyinternalLocation.*"
+  ],
+  "getFileHash.py": [
+    "hashlib"
+  ],
+  "getFileNamesWIthmport.py": [
+    "MakeSureCopied",
+    "glob",
+    "shutil",
+    "os",
+    "re"
+  ],
+  "getFinalLocationItens.py": [
+    "PutListDataIntoImage",
+    "getTableData"
+  ],
+  "GetFontFilePaths.py": [
+    "os",
+    "pathlib"
+  ],
+  "GetFontName.py": [
+    "fontTools.ttLib"
+  ],
+  "getImageDpi.py": [],
+  "getImagePixelToBorder.py": [
+    "pathlib",
+    "RunPageConfigurationMacro",
+    "CheckImageSize"
+  ],
+  "GetItemAddressAndDescription.py": [
+    "getTableData",
+    "readSqlDatabase",
+    "ChangeStartupDirectoryT",
+    "PrintTexListSerial",
+    "numpy"
+  ],
+  "getItemFromSameLineDb.py": [
+    "readSqlDatabase",
+    "getTableData"
+  ],
+  "GetKeyfileNameType.py": [
+    "RegularExpressionTextOrList"
+  ],
+  "GetLocationName.py": [
+    "getTableData"
+  ],
+  "getLocationsExcel.py": [
+    "dropSqlTable",
+    "pandas",
+    "getTableData",
+    "CheckLocationDataExcel",
+    "PrintTexListSerial",
+    "createSqliteTableFromList",
+    "os",
+    "CloseEspecificWorkbook",
+    "win32com.client"
+  ],
+  "getLocationValues.py": [
+    "pandas",
+    "isList",
+    "getTableData"
+  ],
+  "GetNewStamp.py": [
+    "dropSqlTable",
+    "getTableData",
+    "createSqliteTableFromList",
+    "os",
+    "CheckIfFileChanged"
+  ],
+  "GetOldStamp.py": [
+    "dropSqlTable",
+    "os",
+    "createSqliteTableFromList",
+    "getTableData"
+  ],
+  "getPixelImageSize.py": [
+    "os.path",
+    "PIL.Image"
+  ],
+  "getRealdatafillName.py": [
+    "pandas",
+    "PrintTexListSerial",
+    "getTableData"
+  ],
+  "getTableData.py": [
+    "dropSqlTable",
+    "GetKeyfileNameType",
+    "GetWriteDBTableSecured",
+    "sqlite3",
+    "changeDirectory",
+    "createSqliteTableFromList",
+    "os"
+  ],
+  "getTableDataBACKUP.py": null,
+  "getTableDataCall.py": [
+    "pprint",
+    "getTableData.*"
+  ],
+  "getTableDataCallout.py": [
+    "getTableData"
+  ],
+  "getTextfromLiTxFunction.py": [
+    "cv2"
+  ],
+  "getTextfromQR.py": [
+    "cv2.checkChessboard",
+    "pandas",
+    "datetime",
+    "getTableData",
+    "OpenDeleteRecreateSheetWithData",
+    "getTextfromQRFunction"
+  ],
+  "getTextfromQRFunction.py": [
+    "cv2"
+  ],
+  "getTextfromTxli.py": [
+    "OpenDeleteRecreateSheetWithData",
+    "datetime",
+    "getTextfromLiTxFunction",
+    "getTableData"
+  ],
+  "GetTitleAndDataForSingleRowTable.py": [
+    "getTableData"
+  ],
+  "getUniqueAddFileEnd.py": [
+    "time"
+  ],
+  "getUniqueAddFileEndWithFIlename.py": [
+    "getUniqueAddFileEnd"
+  ],
+  "getWordTableLimits.py": [],
+  "GetWriteDBTableSecured.py": [
+    "pysqlitecipher.sqlitewrapper",
+    "EncodeDecode4Db",
+    "FilePathFromPython",
+    "CleanUpSencence",
+    "importedDataPyDTs.*",
+    "RemoveExtraSlashes",
+    "importedDataPycommaReplaceData.*",
+    "os"
+  ],
+  "GetWriteDBTableSecuredCallFunction.py": [
+    "pprint",
+    "GetWriteDBTableSecured"
+  ],
+  "GetWriteDBTableSecuredDATACallFuntion.py": [
+    "os",
+    "datetime.datetime",
+    "pprint",
+    "GetWriteDBTableSecured"
+  ],
+  "GSn.py": [
+    "importedWindowTitle.*",
+    "win32gui",
+    "win32process",
+    "numpy",
+    "ctypes",
+    "SnL.*"
+  ],
+  "IfFirstRun.py": [
+    "PrintTexListSerial",
+    "getTableData"
+  ],
+  "IfSingleListMakeDoubleList.py": [
+    "checkIfDoubleList"
+  ],
+  "imageSizeByMultiplicationValue.py": [],
+  "importedDataPyAutoFormFillerKey.py": [],
+  "importedDataPyAutoFormFiller_OutputFiles.py": [],
+  "importedDataPycommaReplaceData.py": [],
+  "importedDataPyDTs.py": [
+    "FilePathFromPython",
+    "GSn.*"
+  ],
+  "importedDataPyexcelLocation.py": [],
+  "importedDataPyFAutoForm_FillerFiles.py": [],
+  "importedDataPyFilesInDatabaseLocation.py": [],
+  "importedDataPyimageFolderLocation.py": [],
+  "importedDataPyinternalLocation.py": [],
+  "importedDataPyupdateNamesFile.py": [],
+  "importedFNUDataPyDTs.py": [
+    "os"
+  ],
+  "importedWindowTitle.py": [],
+  "insertIntoDatabase.py": [
+    "sys",
+    "DeleteAllTempFiles",
+    "getTableData",
+    "CleanUpSencence",
+    "importedDataPyDTs.*",
+    "importedFNUDataPyDTs.*"
+  ],
+  "isList.py": [],
+  "JoinImagesIntoPdfContinued.py": [
+    "PyPDF2",
+    "getTableData",
+    "subprocess",
+    "ResizeImagesInBulk",
+    "datetime.datetime",
+    "PIL.Image",
+    "os"
+  ],
+  "JoinImagesIntoPdfParallel.py": [
+    "JoinImagesIntoPdfContinued"
+  ],
+  "JoinImagesIntoPdfSingle.py": [
+    "JoinImagesIntoPdfContinued"
+  ],
+  "JoinPdfs.py": [
+    "os",
+    "PyPDF2"
+  ],
+  "JoinPdfWGetDatas.py": [
+    "subprocess",
+    "JoinPdfs",
+    "datetime.datetime",
+    "getTableData"
+  ],
+  "jpgToPdf.py": [
+    "PIL.Image"
+  ],
+  "keepOnly10OfTypeFilesInFolder.py": [
+    "os.path.isfile",
+    "os",
+    "pandas",
+    "os.listdir"
+  ],
+  "ListToSentence.py": [],
+  "LMFAddInfoExcel.py": [
+    "pandas",
+    "getTableData",
+    "GetExcelFilesinLocation",
+    "importedDataPyexcelLocation.*",
+    "FileExistInDatabaseFunction",
+    "changeDirectory",
+    "getLocationValues",
+    "importedDataPyAutoFormFiller_OutputFiles.*"
+  ],
+  "LMFFDbAutoFormfiller.py": null,
+  "LoadToMultipleFilesDetails.py": [
+    "getTableData",
+    "base93Characterconversion",
+    "GetExcelFilesinLocation",
+    "importedDataPyexcelLocation.*",
+    "readSqlDatabase",
+    "changeDirectory",
+    "DeleteExcelTempFiles",
+    "OpenDeleteRecreateSheet",
+    "importedDataPyAutoFormFiller_OutputFiles.*"
+  ],
+  "LoadToSingleFileDetails.py": [
+    "openWorkbook",
+    "os.path.isfile",
+    "getAddressesFromColumn",
+    "getTableData",
+    "readSqlDatabase",
+    "StringListIntoList",
+    "os.listdir"
+  ],
+  "LoadToSingleFileDetailsALL.py": [
+    "openWorkbook",
+    "pandas",
+    "getAddressesFromColumn",
+    "GetExcelFilesinLocation",
+    "importedDataPyexcelLocation.*",
+    "readSqlDatabase",
+    "ListToSentence",
+    "getLocationValues",
+    "ChangeStartupDirectoryT",
+    "styleframe.StyleFrame",
+    "os"
+  ],
+  "LoadToSingleFileDetailsP2.py": null,
+  "LoadToSingleFileDetailsP3.py": [
+    "pandas",
+    "getTableData",
+    "StringListIntoList",
+    "ChangeStartupDirectoryT",
+    "frameStyleByColor",
+    "os"
+  ],
+  "loopOfTheDataInput.py": [
+    "PIL.ImageDraw",
+    "GetAllFontNamesFromFolderFunction",
+    "GetFontFilePaths",
+    "datetime",
+    "getUniqueAddFileEndWithFIlename",
+    "getTableData",
+    "PIL.ImageFont",
+    "generateTxtFile",
+    "PrintTexListSerial",
+    "PIL.Image",
+    "os",
+    "time",
+    "importedDataPyAutoFormFiller_OutputFiles.*",
+    "importedDataPyinternalLocation.*",
+    "CopyFileToNewLocation"
+  ],
+  "LSFcheckIfFileExistsInLocation.py": [
+    "FixExcelExtension",
+    "PrintTexListSerial",
+    "os.path",
+    "getTableData"
+  ],
+  "MakeLinesInTxtUnique.py": [],
+  "MakeSureCopied.py": [
+    "shutil",
+    "time"
+  ],
+  "MultipleExcelToJoinedPdf.py": [
+    "JoinPdfs",
+    "importedDataPyFAutoForm_FillerFiles.*",
+    "pathlib",
+    "importedDataPyinternalLocation.*",
+    "MultipleExcelToMultiplePdfs"
+  ],
+  "MultipleExcelToMultiplePdfs.py": [
+    "ExcelToPdf",
+    "os"
+  ],
+  "MultiplyTextSizeByImageHeight.py": [
+    "cv2",
+    "MakeSureCopied",
+    "getTableData",
+    "os",
+    "time",
+    "re"
+  ],
+  "OpenDeleteRecreateSheet.py": [
+    "pandas",
+    "openpyxl",
+    "getTableData",
+    "openpyxl.utils.get_column_letter",
+    "openpyxl.styles.PatternFill",
+    "StringListIntoList",
+    "random",
+    "PrintTexListSerial",
+    "os",
+    "time",
+    "openpyxl.styles.colors"
+  ],
+  "OpenDeleteRecreateSheetWithData.py": [
+    "openpyxl.styles.Alignment",
+    "os",
+    "pandas",
+    "openpyxl"
+  ],
+  "OpenExcelDocument.py": [],
+  "OpenFolderLocation.py": [
+    "os",
+    "importedDataPyAutoFormFiller_OutputFiles.*",
+    "importedDataPyinternalLocation.*",
+    "getTableData"
+  ],
+  "OpenWordDocument.py": [
+    "openWorkbook",
+    "dropSqlTable",
+    "closeWordWithHelp",
+    "getTableData",
+    "importedDataPyexcelLocation.*",
+    "createSqliteTableFromList",
+    "os",
+    "CloseEspecificWorkbook",
+    "win32com.client",
+    "importedDataPyinternalLocation.*"
+  ],
+  "openWorkbook.py": [
+    "sys",
+    "win32com",
+    "shutil",
+    "re",
+    "os",
+    "win32com.client"
+  ],
+  "OPFSelectImageFileTitleAndData.py": [
+    "pdfToJpg",
+    "getTableData"
+  ],
+  "PandasDfIntoSecureDb.py": [
+    "pandas"
+  ],
+  "pdfToJpg.py": [
+    "os",
+    "PyPDF2",
+    "endingFileDiferentiator",
+    "pdf2image.convert_from_path"
+  ],
+  "pdfToJpgBACKUP.py": [
+    "pypdfium2"
+  ],
+  "pdfToJpgBACKUP2.py": [
+    "pypdfium2",
+    "multiprocessing.Process"
+  ],
+  "pdfToJpgOld.py": [
+    "PyPDF2",
+    "pdf2image.exceptions.PDFInfoNotInstalledError",
+    "base93Characterconversion",
+    "getTableData",
+    "pdf2image.convert_from_path",
+    "os"
+  ],
+  "pdfToJpgTest1.py": [
+    "pypdfium2",
+    "multiprocessing.pool.ThreadPool"
+  ],
+  "PlaceAboutImage.py": [
+    "importedDataPyimageFolderLocation.*",
+    "PutListDataIntoImageWithFontSizeFunction",
+    "getTableData"
+  ],
+  "placeImageOnTopAnother.py": [
+    "PIL.Image"
+  ],
+  "placeValuesInFile.py": [
+    "pandas",
+    "getTableData",
+    "getUniqueAddFileEnd",
+    "CreateTempSaveLoationName",
+    "CopyFileAnContinue",
+    "TestIfTableValueExists",
+    "StringListIntoList",
+    "ChangeStartupDirectoryT",
+    "ReplaceInDoubleList",
+    "getItemFromSameLineDb",
+    "os"
+  ],
+  "PrintTexListSerial.py": [],
+  "PutListDataIntoImage.py": [
+    "PIL.ImageDraw",
+    "getTableData",
+    "copyImageToAppFolderFromPython",
+    "PIL.ImageFont",
+    "StringListIntoList",
+    "PIL.Image",
+    "MultiplyTextSizeByImageHeight",
+    "RemoveExtraSlashes",
+    "os",
+    "pathlib"
+  ],
+  "PutListDataIntoImageWithFontSize.py": [
+    "PutListDataIntoImageWithFontSizeFunction"
+  ],
+  "PutListDataIntoImageWithFontSizeFunction.py": [
+    "PIL.ImageDraw",
+    "GetAllFontNamesFromFolderFunction",
+    "pandas",
+    "GetFontFilePaths",
+    "getTableData",
+    "importedDataPyimageFolderLocation.*",
+    "copyImageToAppFolderFromPython",
+    "PIL.ImageFont",
+    "PIL.Image",
+    "MultiplyTextSizeByImageHeight",
+    "os"
+  ],
+  "PutListDataIntoImageWithFontSizeFunction4.py": [
+    "PIL.ImageDraw",
+    "GetAllFontNamesFromFolderFunction",
+    "pandas",
+    "GetFontFilePaths",
+    "getTableData",
+    "copyImageToAppFolderFromPython",
+    "PIL.ImageFont",
+    "PIL.Image",
+    "MultiplyTextSizeByImageHeight",
+    "os"
+  ],
+  "PutListDataIntoImageWithFontSizeStep5.py": [
+    "PIL.ImageDraw",
+    "GetFontFilePaths",
+    "getTableData",
+    "copyImageToAppFolderFromPython",
+    "PIL.ImageFont",
+    "PIL.Image",
+    "MultiplyTextSizeByImageHeight",
+    "os"
+  ],
+  "readSqlDatabase.py": [
+    "pandas",
+    "GetKeyfileNameType",
+    "GetWriteDBTableSecured",
+    "PandasDfIntoSecureDb",
+    "sqlalchemy.create_engine",
+    "changeDirectory"
+  ],
+  "RegularExpressionTextOrList.py": [
+    "re"
+  ],
+  "RemoveCharacters.py": [
+    "re",
+    "PrintTexListSerial",
+    "getTableData"
+  ],
+  "RemoveExtension.py": [],
+  "RemoveExtraSlashes.py": [],
+  "RemoveLastAndTryAgain.py": [
+    "getTableData"
+  ],
+  "RemoveMacroFromSheet.py": null,
+  "ReplaceInDoubleList.py": [],
+  "resizeImage.py": [
+    "cv2"
+  ],
+  "ResizeImagesInBulk.py": [
+    "resizeImage",
+    "PIL.Image",
+    "time"
+  ],
+  "resizeImageTest.py": [
+    "cv2"
+  ],
+  "ReturnFromSameFileInside.py": [
+    "closeWordWithHelp",
+    "sqlite3.dbapi2.Error",
+    "MakeSureCopied",
+    "getTableData",
+    "ForceCloseSpecificPaintFile",
+    "changeDirectory",
+    "shutil",
+    "PrintTexListSerial",
+    "os",
+    "CloseEspecificWorkbook"
+  ],
+  "RunCreateBlackCrossPaintMacro.py": [
+    "pathlib",
+    "RunExcelMacro"
+  ],
+  "RunDeleteAllTempFilesFromApp.py": [
+    "DeleteAllTempFiles"
+  ],
+  "RunDeleteObjFromTableFL.py": [
+    "DeleteObjFromTable"
+  ],
+  "RunExcelMacro.py": null,
+  "RunImportImageMacro.py": [
+    "RunExcelMacro"
+  ],
+  "RunMergeCellsMacro.py": [
+    "RunExcelMacro"
+  ],
+  "RunOpenDeleteRecreateSheet.py": [
+    "OpenDeleteRecreateSheet"
+  ],
+  "RunPageConfigurationMacro.py": [
+    "RunExcelMacro"
+  ],
+  "RunRegularExpressionTextOrList.py": [
+    "RegularExpressionTextOrList",
+    "sys"
+  ],
+  "SearchFolderFIleNames.py": [
+    "os",
+    "re"
+  ],
+  "shiftImage.py": [
+    "cv2",
+    "numpy"
+  ],
+  "SingleSeriesValueToString.py": [],
+  "SnL.py": [],
+  "SortFilesIntoFolders.py": [
+    "pandas",
+    "MakeSureCopied",
+    "getTableData",
+    "subprocess",
+    "pathlib.Path",
+    "os"
+  ],
+  "StringListIntoList.py": [
+    "IfSingleListMakeDoubleList"
+  ],
+  "StringToOrdList.py": [],
+  "testFileNameChange.py": [
+    "base93Characterconversion"
+  ],
+  "TestIfTableValueExists.py": [
+    "getTableData"
+  ],
+  "testingAllowedDatabaevalues.py": [
+    "getTableData"
+  ],
+  "testTextSpliting.py": [
+    "base93Characterconversion"
+  ],
+  "valueInFrame.py": [],
+  "WordOrExcelToPdf.py": [
+    "ExcelToPdf",
+    "getTableData",
+    "subprocess",
+    "wordToPdf",
+    "jpgToPdf"
+  ],
+  "wordToJpg.py": [
+    "os",
+    "wordToPdf",
+    "pdfToJpg"
+  ],
+  "wordToPdf.py": [
+    "docx2pdf.convert"
+  ],
+  "writeToSqlite.py": [
+    "GetKeyfileNameType",
+    "GetWriteDBTableSecured",
+    "h11.Data",
+    "PandasDfIntoSecureDb",
+    "base93Characterconversion",
+    "keepOnly10OfTypeFilesInFolder",
+    "sqlite3",
+    "changeDirectory",
+    "datetime.date",
+    "time"
+  ]
+}
